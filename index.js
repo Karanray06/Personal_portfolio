@@ -4,54 +4,47 @@
 
 const projects = [
   {
-    title: "E-Commerce Platform",
-    description: "Full-featured online marketplace with secure payment processing, inventory management, and responsive design for seamless shopping across all devices.",
-    tags: ["React", "Node.js", "MongoDB", "Stripe"],
-    image: "project-ecommerce.jpg",
-    liveUrl: "https://example.com/ecommerce",
-    githubUrl: "https://github.com/yourusername/ecommerce"
+    title: "Resume Builder - Xenvra",
+    description: "A professional resume builder application built with React and TypeScript. Features an intuitive interface for creating polished, ATS-friendly resumes with customizable templates and real-time preview.",
+    tags: ["React", "TypeScript", "CSS", "Resume Builder"],
+    image: "project-resume.jpg",
+    liveUrl: "https://github.com/Karanray06/Resume",
+    githubUrl: "https://github.com/Karanray06/Resume"
   },
   {
-    title: "Task Management System",
-    description: "Collaborative productivity tool featuring real-time updates, team workspaces, and intuitive project organization with drag-and-drop functionality.",
-    tags: ["Vue.js", "Firebase", "Tailwind CSS"],
-    image: "project-taskmanager.jpg",
-    liveUrl: "https://example.com/taskmanager",
-    githubUrl: "https://github.com/yourusername/taskmanager"
+    title: "GDG JISU Platform",
+    description: "Community platform for Google Developer Group at JIS University. Built with HTML, CSS, and JavaScript to connect students and facilitate tech events and learning opportunities.",
+    tags: ["HTML", "CSS", "JavaScript", "Community"],
+    image: "project-gdg.jpg",
+    liveUrl: "https://github.com/Karanray06/GDG_JISU",
+    githubUrl: "https://github.com/Karanray06/GDG_JISU"
   },
   {
-    title: "Weather Dashboard",
-    description: "Real-time weather application with location-based forecasts, interactive maps, and detailed meteorological data visualization.",
-    tags: ["JavaScript", "OpenWeather API", "Chart.js"],
-    image: "project-weather.jpg",
-    liveUrl: "https://example.com/weather",
-    githubUrl: "https://github.com/yourusername/weather"
+    title: "Personal Portfolio",
+    description: "A minimalistic and professional portfolio website showcasing my projects and skills. Built with modern web technologies and designed for optimal user experience.",
+    tags: ["HTML", "CSS", "JavaScript", "Portfolio"],
+    image: "project-portfolio.jpg",
+    liveUrl: "https://github.com/Karanray06/Personal_portfolio",
+    githubUrl: "https://github.com/Karanray06/Personal_portfolio"
   },
   {
-    title: "Analytics Platform",
-    description: "Comprehensive data analytics dashboard with customizable reports, trend analysis, and automated insights for business intelligence.",
-    tags: ["Python", "Django", "D3.js", "PostgreSQL"],
-    image: "project-analytics.jpg",
-    liveUrl: "https://example.com/analytics",
-    githubUrl: "https://github.com/yourusername/analytics"
+    title: "C Programming Journey",
+    description: "A collection of C programming projects documenting my journey from basic programming concepts to advanced implementations. Includes data structures, algorithms, and problem-solving exercises.",
+    tags: ["C", "Algorithms", "Data Structures"],
+    image: "project-c.jpg",
+    liveUrl: "https://github.com/Karanray06/C",
+    githubUrl: "https://github.com/Karanray06/C"
   },
   {
-    title: "Fitness Tracker",
-    description: "Mobile-responsive fitness application with workout logging, progress tracking, and personalized health recommendations.",
-    tags: ["React Native", "Express", "MongoDB"],
-    image: "project-fitness.jpg",
-    liveUrl: "https://example.com/fitness",
-    githubUrl: "https://github.com/yourusername/fitness"
-  },
-  {
-    title: "Portfolio Builder",
-    description: "Intuitive portfolio creation tool with customizable templates, drag-and-drop editor, and one-click deployment capabilities.",
-    tags: ["Next.js", "TypeScript", "Tailwind CSS"],
-    image: "project-chatbot.jpg",
-    liveUrl: "https://example.com/portfolio-builder",
-    githubUrl: "https://github.com/yourusername/portfolio-builder"
+    title: "Cloud Skills 2025",
+    description: "Learning repository focused on cloud computing technologies and modern DevOps practices. Exploring cloud platforms, containerization, and scalable infrastructure.",
+    tags: ["Cloud", "DevOps", "Jupyter Notebook"],
+    image: "project-cloud.jpg",
+    liveUrl: "https://github.com/Karanray06/Cloud-Skills-2025",
+    githubUrl: "https://github.com/Karanray06/Cloud-Skills-2025"
   }
 ];
+
 
 // ===================================
 // NAVIGATION SCROLL EFFECT
