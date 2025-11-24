@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Professional Portfolio - Showcasing innovative projects and technical expertise">
+  <meta name="keywords" content="portfolio, developer, software engineer, web development, projects">
+  <title>Your Name - Portfolio</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" id="navbar">
+    <div class="container nav-container">
+      <a href="#home" class="nav-logo">Your Name</a>
+      <ul class="nav-links">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero section" id="home">
+    <div class="container">
+      <div class="hero-content">
+        <p class="hero-greeting">Hello, I'm</p>
+        <h1 class="hero-title">
+          <span class="hero-name">Your Name</span>
+          <span class="hero-role">Software Developer</span>
+        </h1>
+        <p class="hero-description">
+          I build elegant, user-focused digital experiences. Specializing in modern web technologies
+          and creating solutions that make a meaningful impact.
+        </p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary">
+            <span>View Projects</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+          <a href="#contact" class="btn btn-secondary">
+            <span>Get in Touch</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="about-content">
+        <div class="about-text">
+          <div class="section-label">About Me</div>
+          <h2>Building digital products with precision and care</h2>
+          <p>
+            I'm a passionate developer focused on creating clean, efficient, and user-centered applications.
+            With a strong foundation in modern web technologies, I bring ideas to life through thoughtful
+            design and robust code.
+          </p>
+          <p>
+            My approach combines technical expertise with creative problem-solving, ensuring every project
+            not only meets requirements but exceeds expectations. I believe in continuous learning and
+            staying current with industry best practices.
+          </p>
+
+          <div class="about-stats">
+            <div class="stat-item">
+              <span class="stat-number">25+</span>
+              <span class="stat-label">Projects Completed</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">2+</span>
+              <span class="stat-label">Years Experience</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">50+</span>
+              <span class="stat-label">GitHub Repos</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">8+</span>
+              <span class="stat-label">Technologies</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-image">
+          <div class="about-image-wrapper">
+            <img src="developer-workspace.jpg" alt="Professional workspace" id="aboutImage">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">Portfolio</div>
+        <h2 class="section-title">Featured Projects</h2>
+        <p class="section-subtitle">
+          A selection of recent work demonstrating technical skills and creative solutions
+        </p>
+      </div>
+
+      <div class="projects-grid" id="projectsGrid">
+        <!-- Projects will be dynamically inserted here -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact/Social Section -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">Connect</div>
+        <h2 class="section-title">Let's Work Together</h2>
+        <p class="section-subtitle">
+          Feel free to reach out for collaborations or just a friendly chat
+        </p>
+      </div>
+
+      <div class="social-grid">
+        <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" class="social-card">
+          <div class="social-icon">
+            <i class="fab fa-github"></i>
+          </div>
+          <div class="social-info">
+            <h3>GitHub</h3>
+            <p>View my repositories</p>
+          </div>
+        </a>
+
+        <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" class="social-card">
+          <div class="social-icon">
+            <i class="fab fa-linkedin"></i>
+          </div>
+          <div class="social-info">
+            <h3>LinkedIn</h3>
+            <p>Connect professionally</p>
+          </div>
+        </a>
+
+        <a href="mailto:your.email@example.com" class="social-card">
+          <div class="social-icon">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <div class="social-info">
+            <h3>Email</h3>
+            <p>Send me a message</p>
+          </div>
+        </a>
+
+        <a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer" class="social-card">
+          <div class="social-icon">
+            <i class="fab fa-twitter"></i>
+          </div>
+          <div class="social-info">
+            <h3>Twitter</h3>
+            <p>Follow my updates</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">Your Name</div>
+        <p class="footer-description">
+          Crafting digital experiences with passion and precision.
+        </p>
+
+        <div class="footer-social">
+          <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" class="footer-social-link"
+            aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer"
+            class="footer-social-link" aria-label="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer"
+            class="footer-social-link" aria-label="Twitter">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="mailto:your.email@example.com" class="footer-social-link" aria-label="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2024 Your Name. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="index.js"></script>
+</body>
+
+</html>
