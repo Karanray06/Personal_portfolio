@@ -8,7 +8,7 @@ const projects = [
     description: "A professional resume builder application built with React and TypeScript. Features an intuitive interface for creating polished, ATS-friendly resumes with customizable templates and real-time preview.",
     tags: ["React", "TypeScript", "CSS", "Resume Builder"],
     image: "https://placehold.co/600x400/2563eb/ffffff?text=Resume+Builder",
-    liveUrl: "https://Karanray06.github.io/Resume",
+    liveUrl: "https://github.com/Karanray06/Resume",
     githubUrl: "https://github.com/Karanray06/Resume"
   },
   {
@@ -16,7 +16,7 @@ const projects = [
     description: "Community platform for Google Developer Group at JIS University. Built with HTML, CSS, and JavaScript to connect students and facilitate tech events and learning opportunities.",
     tags: ["HTML", "CSS", "JavaScript", "Community"],
     image: "https://placehold.co/600x400/ea4335/ffffff?text=GDG+JISU",
-    liveUrl: "https://Karanray06.github.io/GDG_JISU",
+    liveUrl: "https://github.com/Karanray06/GDG_JISU",
     githubUrl: "https://github.com/Karanray06/GDG_JISU"
   },
   {
@@ -32,7 +32,7 @@ const projects = [
     description: "A collection of C programming projects documenting my journey from basic programming concepts to advanced implementations. Includes data structures, algorithms, and problem-solving exercises.",
     tags: ["C", "Algorithms", "Data Structures"],
     image: "https://placehold.co/600x400/0f172a/ffffff?text=C+Programming",
-    liveUrl: "https://Karanray06.github.io/C",
+    liveUrl: null,
     githubUrl: "https://github.com/Karanray06/C"
   },
   {
@@ -40,11 +40,10 @@ const projects = [
     description: "Learning repository focused on cloud computing technologies and modern DevOps practices. Exploring cloud platforms, containerization, and scalable infrastructure.",
     tags: ["Cloud", "DevOps", "Jupyter Notebook"],
     image: "https://placehold.co/600x400/7c3aed/ffffff?text=Cloud+Skills",
-    liveUrl: "https://Karanray06.github.io/Cloud-Skills-2025",
+    liveUrl: null,
     githubUrl: "https://github.com/Karanray06/Cloud-Skills-2025"
   }
 ];
-
 
 // ===================================
 // NAVIGATION SCROLL EFFECT
@@ -90,6 +89,25 @@ function renderProjects() {
     const projectCard = document.createElement('div');
     projectCard.className = 'project-card';
 
+    // Create buttons HTML based on available links
+    let buttonsHtml = '';
+
+    if (project.liveUrl) {
+      buttonsHtml += `
+        <a href="${project.liveUrl}" target="_blank" rel="noopener noreferrer" class="project-link">
+          <i class="fas fa-external-link-alt"></i>
+          <span>Live Demo</span>
+        </a>
+      `;
+    }
+
+    buttonsHtml += `
+      <a href="${project.githubUrl}" target="_blank" rel="noopener noreferrer" class="project-link">
+        <i class="fab fa-github"></i>
+        <span>Source Code</span>
+      </a>
+    `;
+
     projectCard.innerHTML = `
       <img src="${project.image}" alt="${project.title}" class="project-image" id="projectImage${index}">
       <div class="project-content">
@@ -99,14 +117,7 @@ function renderProjects() {
         <h3 class="project-title">${project.title}</h3>
         <p class="project-description">${project.description}</p>
         <div class="project-links">
-          <a href="${project.liveUrl}" target="_blank" rel="noopener noreferrer" class="project-link">
-            <i class="fas fa-external-link-alt"></i>
-            <span>Live Demo</span>
-          </a>
-          <a href="${project.githubUrl}" target="_blank" rel="noopener noreferrer" class="project-link">
-            <i class="fab fa-github"></i>
-            <span>Source Code</span>
-          </a>
+          ${buttonsHtml}
         </div>
       </div>
     `;
