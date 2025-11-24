@@ -7,40 +7,40 @@ const projects = [
     title: "Resume Builder - Xenvra",
     description: "A professional resume builder application built with React and TypeScript. Features an intuitive interface for creating polished, ATS-friendly resumes with customizable templates and real-time preview.",
     tags: ["React", "TypeScript", "CSS", "Resume Builder"],
-    image: "project-resume.jpg",
-    liveUrl: "https://github.com/Karanray06/Resume",
+    image: "https://placehold.co/600x400/2563eb/ffffff?text=Resume+Builder",
+    liveUrl: "https://Karanray06.github.io/Resume",
     githubUrl: "https://github.com/Karanray06/Resume"
   },
   {
     title: "GDG JISU Platform",
     description: "Community platform for Google Developer Group at JIS University. Built with HTML, CSS, and JavaScript to connect students and facilitate tech events and learning opportunities.",
     tags: ["HTML", "CSS", "JavaScript", "Community"],
-    image: "project-gdg.jpg",
-    liveUrl: "https://github.com/Karanray06/GDG_JISU",
+    image: "https://placehold.co/600x400/ea4335/ffffff?text=GDG+JISU",
+    liveUrl: "https://Karanray06.github.io/GDG_JISU",
     githubUrl: "https://github.com/Karanray06/GDG_JISU"
   },
   {
     title: "Personal Portfolio",
     description: "A minimalistic and professional portfolio website showcasing my projects and skills. Built with modern web technologies and designed for optimal user experience.",
     tags: ["HTML", "CSS", "JavaScript", "Portfolio"],
-    image: "project-portfolio.jpg",
-    liveUrl: "https://github.com/Karanray06/Personal_portfolio",
+    image: "https://placehold.co/600x400/1a1a1a/ffffff?text=Portfolio",
+    liveUrl: "https://Karanray06.github.io/Personal_portfolio",
     githubUrl: "https://github.com/Karanray06/Personal_portfolio"
   },
   {
     title: "C Programming Journey",
     description: "A collection of C programming projects documenting my journey from basic programming concepts to advanced implementations. Includes data structures, algorithms, and problem-solving exercises.",
     tags: ["C", "Algorithms", "Data Structures"],
-    image: "project-c.jpg",
-    liveUrl: "https://github.com/Karanray06/C",
+    image: "https://placehold.co/600x400/0f172a/ffffff?text=C+Programming",
+    liveUrl: "https://Karanray06.github.io/C",
     githubUrl: "https://github.com/Karanray06/C"
   },
   {
     title: "Cloud Skills 2025",
     description: "Learning repository focused on cloud computing technologies and modern DevOps practices. Exploring cloud platforms, containerization, and scalable infrastructure.",
     tags: ["Cloud", "DevOps", "Jupyter Notebook"],
-    image: "project-cloud.jpg",
-    liveUrl: "https://github.com/Karanray06/Cloud-Skills-2025",
+    image: "https://placehold.co/600x400/7c3aed/ffffff?text=Cloud+Skills",
+    liveUrl: "https://Karanray06.github.io/Cloud-Skills-2025",
     githubUrl: "https://github.com/Karanray06/Cloud-Skills-2025"
   }
 ];
