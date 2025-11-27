@@ -4,17 +4,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Professional Portfolio - Showcasing innovative projects and technical expertise">
-  <meta name="keywords" content="portfolio, developer, software engineer, web development, projects">
-  <title>Karan Ray - Portfolio</title>
+  <meta name="description" content="Karan Ray - Modern Portfolio showcasing innovative projects and technical expertise with domain-specific design">
+  <meta name="keywords" content="portfolio, developer, software engineer, web development, projects, resume builder">
+  <title>Karan Ray - Modern Portfolio</title>
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <!-- Styles -->
   <link rel="stylesheet" href="index.css">
@@ -25,55 +25,248 @@
   <!-- Navigation -->
   <nav class="nav" id="navbar">
     <div class="container nav-container">
-      <a href="#home" class="nav-logo">Karan Ray</a>
+      <a href="#home" class="nav-logo">
+        <i class="fas fa-code"></i> Karan Ray
+      </a>
       <ul class="nav-links">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#resume-builder" class="nav-link">Resume Builder</a></li>
         <li><a href="#about" class="nav-link">About</a></li>
         <li><a href="#projects" class="nav-link">Projects</a></li>
         <li><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
+      <div class="nav-toggle" id="navToggle">
+        <i class="fas fa-bars"></i>
+      </div>
     </div>
   </nav>
 
-  <!-- Hero Section -->
+  <!-- Hero Section with Profile -->
   <section class="hero section" id="home">
+    <div class="hero-background"></div>
     <div class="container">
-      <div class="hero-content">
-        <p class="hero-greeting">Hello, I'm</p>
-        <h1 class="hero-title">
-          <span class="hero-name">Karan Ray</span>
-          <span class="hero-role">B.Tech CSE Student</span>
-        </h1>
-        <p class="hero-description">
-          Turning curiosity into code | Exploring ideas that will shape tomorrow | Passionate about connecting people &
-          technology | B.Tech CSE @ JIS University
-        </p>
-        <div class="hero-cta">
-          <a href="#projects" class="btn btn-primary">
-            <span>View Projects</span>
-            <i class="fas fa-arrow-right"></i>
-          </a>
-          <a href="#contact" class="btn btn-secondary">
-            <span>Get in Touch</span>
-          </a>
+      <div class="hero-wrapper">
+        <div class="hero-content">
+          <p class="hero-greeting">Welcome to my digital space</p>
+          <h1 class="hero-title">
+            <span class="hero-name">Karan Ray</span>
+            <span class="hero-subtitle">Full Stack Developer & Tech Enthusiast</span>
+          </h1>
+          <p class="hero-description">
+            Building innovative digital solutions | Passionate about web development, cloud computing, and open-source technology | B.Tech CSE @ JIS University
+          </p>
+          <div class="hero-cta">
+            <a href="#projects" class="btn btn-primary">
+              <i class="fas fa-arrow-right"></i> View Projects
+            </a>
+            <a href="#contact" class="btn btn-secondary">
+              <i class="fas fa-envelope"></i> Get in Touch
+            </a>
+          </div>
+        </div>
+        <div class="hero-image-wrapper">
+          <img src="profile.jpg" alt="Karan Ray" class="hero-image">
+          <div class="hero-image-border"></div>
         </div>
       </div>
     </div>
   </section>
 
-  </div>
-  </div>
-  </div>
-  </div>
+  <!-- Resume Builder Feature Section -->
+  <section class="section resume-builder-section" id="resume-builder">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">Featured Project</div>
+        <h2 class="section-title">Resume Builder</h2>
+        <p class="section-subtitle">
+          A powerful, intuitive resume creation platform with real-time preview and ATS-friendly templates
+        </p>
+      </div>
+
+      <div class="resume-builder-container">
+        <div class="resume-builder-content">
+          <div class="resume-preview">
+            <div class="resume-header">
+              <h3>Your Resume Name</h3>
+              <p>Software Developer | Full Stack Engineer</p>
+            </div>
+            <div class="resume-section">
+              <h4>Professional Summary</h4>
+              <p>Experienced developer with expertise in building scalable web applications using modern technologies.</p>
+            </div>
+            <div class="resume-section">
+              <h4>Experience</h4>
+              <p><strong>Senior Developer</strong> - Tech Company (2023-Present)</p>
+              <p>Led development of innovative projects and mentored junior developers.</p>
+            </div>
+            <div class="resume-section">
+              <h4>Skills</h4>
+              <div class="skills-grid">
+                <span class="skill-tag">React</span>
+                <span class="skill-tag">TypeScript</span>
+                <span class="skill-tag">Node.js</span>
+                <span class="skill-tag">CSS3</span>
+                <span class="skill-tag">Git</span>
+                <span class="skill-tag">AWS</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="resume-features">
+            <h3>Key Features</h3>
+            <div class="features-list">
+              <div class="feature-item">
+                <div class="feature-icon">
+                  <i class="fas fa-edit"></i>
+                </div>
+                <div class="feature-content">
+                  <h4>Intuitive Editor</h4>
+                  <p>Easy-to-use interface for building professional resumes</p>
+                </div>
+              </div>
+
+              <div class="feature-item">
+                <div class="feature-icon">
+                  <i class="fas fa-eye"></i>
+                </div>
+                <div class="feature-content">
+                  <h4>Live Preview</h4>
+                  <p>See changes in real-time as you build your resume</p>
+                </div>
+              </div>
+
+              <div class="feature-item">
+                <div class="feature-icon">
+                  <i class="fas fa-check-circle"></i>
+                </div>
+                <div class="feature-content">
+                  <h4>ATS Optimized</h4>
+                  <p>Designed to pass Applicant Tracking Systems</p>
+                </div>
+              </div>
+
+              <div class="feature-item">
+                <div class="feature-icon">
+                  <i class="fas fa-palette"></i>
+                </div>
+                <div class="feature-content">
+                  <h4>Multiple Templates</h4>
+                  <p>Choose from professionally designed templates</p>
+                </div>
+              </div>
+
+              <div class="feature-item">
+                <div class="feature-icon">
+                  <i class="fas fa-download"></i>
+                </div>
+                <div class="feature-content">
+                  <h4>Export Options</h4>
+                  <p>Download as PDF or share online</p>
+                </div>
+              </div>
+
+              <div class="feature-item">
+                <div class="feature-icon">
+                  <i class="fas fa-shield-alt"></i>
+                </div>
+                <div class="feature-content">
+                  <h4>Secure & Private</h4>
+                  <p>Your data is encrypted and never shared</p>
+                </div>
+              </div>
+            </div>
+
+            <a href="https://github.com/Karanray06/Resume" target="_blank" class="btn btn-primary">
+              <i class="fab fa-github"></i> View on GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="section about-section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">About Me</div>
+        <h2 class="section-title">Who I Am</h2>
+      </div>
+
+      <div class="about-content">
+        <div class="about-text">
+          <p>
+            I'm a passionate B.Tech Computer Science student at JIS University with a strong foundation in web development, cloud computing, and software engineering. I believe in the power of technology to solve real-world problems and create meaningful digital experiences.
+          </p>
+          <p>
+            My journey in tech has been driven by curiosity and a commitment to continuous learning. I love exploring new technologies, collaborating with diverse teams, and contributing to open-source projects. Whether it's building beautiful user interfaces or architecting scalable backend systems, I approach every project with dedication and creativity.
+          </p>
+
+          <div class="about-stats">
+            <div class="stat-item">
+              <span class="stat-number">15+</span>
+              <span class="stat-label">Projects</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">3+</span>
+              <span class="stat-label">Years Experience</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">50+</span>
+              <span class="stat-label">Contributions</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">10+</span>
+              <span class="stat-label">Technologies</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-skills">
+          <h3>Tech Stack</h3>
+          <div class="skills-category">
+            <h4>Frontend</h4>
+            <div class="skills-group">
+              <span class="skill-badge">React</span>
+              <span class="skill-badge">TypeScript</span>
+              <span class="skill-badge">HTML5</span>
+              <span class="skill-badge">CSS3</span>
+              <span class="skill-badge">JavaScript</span>
+            </div>
+          </div>
+
+          <div class="skills-category">
+            <h4>Backend</h4>
+            <div class="skills-group">
+              <span class="skill-badge">Node.js</span>
+              <span class="skill-badge">Express</span>
+              <span class="skill-badge">Python</span>
+              <span class="skill-badge">C/C++</span>
+            </div>
+          </div>
+
+          <div class="skills-category">
+            <h4>Cloud & DevOps</h4>
+            <div class="skills-group">
+              <span class="skill-badge">AWS</span>
+              <span class="skill-badge">Git</span>
+              <span class="skill-badge">Docker</span>
+              <span class="skill-badge">CI/CD</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- Projects Section -->
-  <section class="section" id="projects">
+  <section class="section projects-section" id="projects">
     <div class="container">
       <div class="section-header">
         <div class="section-label">Portfolio</div>
         <h2 class="section-title">Featured Projects</h2>
         <p class="section-subtitle">
-          A selection of recent work demonstrating technical skills and creative solutions
+          A selection of projects across different domains with custom themes and designs
         </p>
       </div>
 
@@ -84,18 +277,38 @@
   </section>
 
   <!-- Contact/Social Section -->
-  <section class="section" id="contact">
+  <section class="section contact-section" id="contact">
     <div class="container">
       <div class="section-header">
         <div class="section-label">Connect</div>
-        <h2 class="section-title">Let's Work Together</h2>
+        <h2 class="section-title">Let's Collaborate</h2>
         <p class="section-subtitle">
-          Feel free to reach out for collaborations or just a friendly chat
+          I'm always interested in hearing about new projects and opportunities. Feel free to reach out!
         </p>
       </div>
 
       <div class="social-grid">
-        <a href="https://github.com/Karanray06" target="_blank" rel="noopener noreferrer" class="social-card">
+        <a href="mailto:2006karanray@gmail.com" class="social-card email-card">
+          <div class="social-icon">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <div class="social-info">
+            <h3>Email</h3>
+            <p>2006karanray@gmail.com</p>
+          </div>
+        </a>
+
+        <a href="https://wa.me/917980398203" target="_blank" rel="noopener noreferrer" class="social-card whatsapp-card">
+          <div class="social-icon">
+            <i class="fab fa-whatsapp"></i>
+          </div>
+          <div class="social-info">
+            <h3>WhatsApp</h3>
+            <p>+91 7980398203</p>
+          </div>
+        </a>
+
+        <a href="https://github.com/Karanray06" target="_blank" rel="noopener noreferrer" class="social-card github-card">
           <div class="social-icon">
             <i class="fab fa-github"></i>
           </div>
@@ -105,8 +318,7 @@
           </div>
         </a>
 
-        <a href="https://www.linkedin.com/in/karan-ray-370150351/" target="_blank" rel="noopener noreferrer"
-          class="social-card">
+        <a href="https://www.linkedin.com/in/karan-ray-370150351/" target="_blank" rel="noopener noreferrer" class="social-card linkedin-card">
           <div class="social-icon">
             <i class="fab fa-linkedin"></i>
           </div>
@@ -116,7 +328,7 @@
           </div>
         </a>
 
-        <a href="https://www.instagram.com/karanray06/" target="_blank" rel="noopener noreferrer" class="social-card">
+        <a href="https://www.instagram.com/karanray06/" target="_blank" rel="noopener noreferrer" class="social-card instagram-card">
           <div class="social-icon">
             <i class="fab fa-instagram"></i>
           </div>
@@ -126,7 +338,7 @@
           </div>
         </a>
 
-        <a href="https://x.com/karanray06" target="_blank" rel="noopener noreferrer" class="social-card">
+        <a href="https://x.com/karanray06" target="_blank" rel="noopener noreferrer" class="social-card twitter-card">
           <div class="social-icon">
             <i class="fab fa-x-twitter"></i>
           </div>
@@ -143,39 +355,51 @@
   <footer class="footer">
     <div class="container">
       <div class="footer-content">
-        <div class="footer-logo">Karan Ray</div>
-        <p class="footer-description">
-          Crafting digital experiences with passion and precision.
-        </p>
+        <div class="footer-section">
+          <div class="footer-logo">
+            <i class="fas fa-code"></i> Karan Ray
+          </div>
+          <p class="footer-description">
+            Crafting digital experiences with passion, precision, and modern web technologies.
+          </p>
+        </div>
 
-        <div class="footer-social">
-          <a href="https://github.com/Karanray06" target="_blank" rel="noopener noreferrer" class="footer-social-link"
-            aria-label="GitHub">
-            <i class="fab fa-github"></i>
-          </a>
-          <a href="https://www.linkedin.com/in/karan-ray-370150351/" target="_blank" rel="noopener noreferrer"
-            class="footer-social-link" aria-label="LinkedIn">
-            <i class="fab fa-linkedin"></i>
-          </a>
-          <a href="https://x.com/karanray06" target="_blank" rel="noopener noreferrer" class="footer-social-link"
-            aria-label="X (Twitter)">
-            <i class="fab fa-x-twitter"></i>
-          </a>
-          <a href="https://www.instagram.com/karanray06/" target="_blank" rel="noopener noreferrer"
-            class="footer-social-link" aria-label="Instagram">
-            <i class="fab fa-instagram"></i>
-          </a>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Follow</h4>
+          <div class="footer-social">
+            <a href="https://github.com/Karanray06" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/karan-ray-370150351/" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="LinkedIn">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://x.com/karanray06" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="X (Twitter)">
+              <i class="fab fa-x-twitter"></i>
+            </a>
+            <a href="https://www.instagram.com/karanray06/" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; 2024 Karan Ray. All rights reserved.</p>
+        <p>&copy; 2025 Karan Ray. All rights reserved. | Crafted with <i class="fas fa-heart"></i> and modern web technologies</p>
       </div>
     </div>
   </footer>
 
   <!-- JavaScript -->
-  <script src="index.js"></script>
+  <script type="module" src="index.js"></script>
 </body>
 
 </html>

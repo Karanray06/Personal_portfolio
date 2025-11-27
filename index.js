@@ -1,5 +1,5 @@
 // ===================================
-// PROJECT DATA
+// PROJECT DATA WITH DOMAIN THEMES
 // ===================================
 
 const projects = [
@@ -7,41 +7,79 @@ const projects = [
     title: "Resume Builder - Xenvra",
     description: "A professional resume builder application built with React and TypeScript. Features an intuitive interface for creating polished, ATS-friendly resumes with customizable templates and real-time preview.",
     tags: ["React", "TypeScript", "CSS", "Resume Builder"],
-    image: "https://placehold.co/600x400/2563eb/ffffff?text=Resume+Builder",
+    image: "project-ecommerce.jpg",
     liveUrl: "https://github.com/Karanray06/Resume",
-    githubUrl: "https://github.com/Karanray06/Resume"
+    githubUrl: "https://github.com/Karanray06/Resume",
+    domain: "resume",
+    colors: {
+      primary: "#2563eb",
+      secondary: "#dbeafe"
+    }
   },
   {
     title: "GDG JISU Platform",
     description: "Community platform for Google Developer Group at JIS University. Built with HTML, CSS, and JavaScript to connect students and facilitate tech events and learning opportunities.",
     tags: ["HTML", "CSS", "JavaScript", "Community"],
-    image: "https://placehold.co/600x400/ea4335/ffffff?text=GDG+JISU",
+    image: "project-analytics.jpg",
     liveUrl: "https://github.com/Karanray06/GDG_JISU",
-    githubUrl: "https://github.com/Karanray06/GDG_JISU"
+    githubUrl: "https://github.com/Karanray06/GDG_JISU",
+    domain: "tech",
+    colors: {
+      primary: "#7c3aed",
+      secondary: "#f3e8ff"
+    }
   },
   {
     title: "Personal Portfolio",
     description: "A minimalistic and professional portfolio website showcasing my projects and skills. Built with modern web technologies and designed for optimal user experience.",
     tags: ["HTML", "CSS", "JavaScript", "Portfolio"],
-    image: "https://placehold.co/600x400/1a1a1a/ffffff?text=Portfolio",
+    image: "project-chatbot.jpg",
     liveUrl: "https://Karanray06.github.io/Personal_portfolio",
-    githubUrl: "https://github.com/Karanray06/Personal_portfolio"
+    githubUrl: "https://github.com/Karanray06/Personal_portfolio",
+    domain: "dev",
+    colors: {
+      primary: "#059669",
+      secondary: "#d1fae5"
+    }
   },
   {
     title: "C Programming Journey",
     description: "A collection of C programming projects documenting my journey from basic programming concepts to advanced implementations. Includes data structures, algorithms, and problem-solving exercises.",
     tags: ["C", "Algorithms", "Data Structures"],
-    image: "https://placehold.co/600x400/0f172a/ffffff?text=C+Programming",
-    liveUrl: null,
-    githubUrl: "https://github.com/Karanray06/C"
+    image: "project-taskmanager.jpg",
+    liveUrl: "https://github.com/Karanray06/C",
+    githubUrl: "https://github.com/Karanray06/C",
+    domain: "algorithms",
+    colors: {
+      primary: "#ea580c",
+      secondary: "#fed7aa"
+    }
   },
   {
     title: "Cloud Skills 2025",
     description: "Learning repository focused on cloud computing technologies and modern DevOps practices. Exploring cloud platforms, containerization, and scalable infrastructure.",
     tags: ["Cloud", "DevOps", "Jupyter Notebook"],
-    image: "https://placehold.co/600x400/7c3aed/ffffff?text=Cloud+Skills",
-    liveUrl: null,
-    githubUrl: "https://github.com/Karanray06/Cloud-Skills-2025"
+    image: "project-fitness.jpg",
+    liveUrl: "https://github.com/Karanray06/Cloud-Skills-2025",
+    githubUrl: "https://github.com/Karanray06/Cloud-Skills-2025",
+    domain: "cloud",
+    colors: {
+      primary: "#db2777",
+      secondary: "#fce7f3"
+    }
+  },
+  {
+    title: "Weather Application",
+    description: "A real-time weather application with location-based forecasting. Built with JavaScript, featuring current weather data, multi-day forecasts, and beautiful UI design.",
+    tags: ["JavaScript", "API", "UI/UX"],
+    image: "project-weather.jpg",
+    liveUrl: "https://github.com/Karanray06/Weather-App",
+    githubUrl: "https://github.com/Karanray06/Weather-App",
+    domain: "tech",
+    colors: {
+      primary: "#7c3aed",
+      secondary: "#f3e8ff"
+    }
   }
 ];
 
@@ -79,7 +117,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // ===================================
-// RENDER PROJECTS
+// RENDER PROJECTS WITH DOMAIN THEMES
 // ===================================
 
 function renderProjects() {
@@ -88,8 +126,12 @@ function renderProjects() {
   projects.forEach((project, index) => {
     const projectCard = document.createElement('div');
     projectCard.className = 'project-card';
+    
+    // Set CSS variables for domain colors
+    projectCard.style.setProperty('--domain-color-primary', project.colors.primary);
+    projectCard.style.setProperty('--domain-color-secondary', project.colors.secondary);
 
-    // Create buttons HTML based on available links
+    // Create buttons HTML
     let buttonsHtml = '';
 
     if (project.liveUrl) {
@@ -146,7 +188,7 @@ const observer = new IntersectionObserver((entries) => {
 
 // Observe elements for fade-in animation
 function observeElements() {
-  const elements = document.querySelectorAll('.project-card, .social-card, .stat-item, .section-header');
+  const elements = document.querySelectorAll('.project-card, .social-card, .stat-item, .section-header, .feature-item, .resume-preview');
   elements.forEach(el => observer.observe(el));
 }
 
@@ -189,6 +231,20 @@ function animateStats() {
 }
 
 // ===================================
+// MOBILE MENU TOGGLE
+// ===================================
+
+const navToggle = document.getElementById('navToggle');
+if (navToggle) {
+  navToggle.addEventListener('click', () => {
+    const navLinks = document.querySelector('.nav-links');
+    if (navLinks) {
+      navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+    }
+  });
+}
+
+// ===================================
 // INITIALIZE
 // ===================================
 
@@ -227,4 +283,18 @@ if ('IntersectionObserver' in window) {
   });
 }
 
-console.log('Portfolio loaded successfully ✓');
+// ===================================
+// COLOR PICKER FUNCTIONALITY (OPTIONAL)
+// ===================================
+
+// This allows easy customization of colors via CSS variables
+function setProjectColors(projectIndex, primaryColor, secondaryColor) {
+  const cards = document.querySelectorAll('.project-card');
+  if (cards[projectIndex]) {
+    cards[projectIndex].style.setProperty('--domain-color-primary', primaryColor);
+    cards[projectIndex].style.setProperty('--domain-color-secondary', secondaryColor);
+  }
+}
+
+console.log('Modern Portfolio loaded successfully ✓');
+console.log('Domain-specific themes applied with gradient gradients and smooth animations')
