@@ -4,14 +4,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Karan Ray - Modern Portfolio showcasing innovative projects and technical expertise with domain-specific design">
-  <meta name="keywords" content="portfolio, developer, software engineer, web development, projects, resume builder">
-  <title>Karan Ray - Modern Portfolio</title>
+  <meta name="description" content="Karan Ray - Modern Portfolio | Full Stack Developer | Resume Builder Specialist">
+  <meta name="keywords" content="portfolio, developer, software engineer, resume builder, web development">
+  <title>Karan Ray | Portfolio & Resume Builder</title>
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -26,12 +26,11 @@
   <nav class="nav" id="navbar">
     <div class="container nav-container">
       <a href="#home" class="nav-logo">
-        <i class="fas fa-code"></i> Karan Ray
+        <i class="fas fa-rocket"></i> Karan Ray
       </a>
       <ul class="nav-links">
         <li><a href="#home" class="nav-link">Home</a></li>
-        <li><a href="#resume-builder" class="nav-link">Resume Builder</a></li>
-        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#featured" class="nav-link">Featured</a></li>
         <li><a href="#projects" class="nav-link">Projects</a></li>
         <li><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
@@ -41,144 +40,109 @@
     </div>
   </nav>
 
-  <!-- Hero Section with Profile -->
+  <!-- Hero Section with Profile Image -->
   <section class="hero section" id="home">
-    <div class="hero-background"></div>
     <div class="container">
       <div class="hero-wrapper">
-        <div class="hero-content">
-          <p class="hero-greeting">Welcome to my digital space</p>
-          <h1 class="hero-title">
-            <span class="hero-name">Karan Ray</span>
-            <span class="hero-subtitle">Full Stack Developer & Tech Enthusiast</span>
-          </h1>
-          <p class="hero-description">
-            Building innovative digital solutions | Passionate about web development, cloud computing, and open-source technology | B.Tech CSE @ JIS University
-          </p>
-          <div class="hero-cta">
-            <a href="#projects" class="btn btn-primary">
-              <i class="fas fa-arrow-right"></i> View Projects
-            </a>
-            <a href="#contact" class="btn btn-secondary">
-              <i class="fas fa-envelope"></i> Get in Touch
-            </a>
+        <div class="hero-image-container">
+          <div class="profile-image-frame">
+            <img src="profile.jpg" alt="Karan Ray" class="profile-image">
+            <div class="image-glow"></div>
           </div>
         </div>
-        <div class="hero-image-wrapper">
-          <img src="profile.jpg" alt="Karan Ray" class="hero-image">
-          <div class="hero-image-border"></div>
+        <div class="hero-content">
+          <p class="hero-greeting">Welcome! 👋 I'm</p>
+          <h1 class="hero-title">Karan Ray</h1>
+          <p class="hero-role">Full Stack Developer & Tech Innovator</p>
+          <p class="hero-description">
+            Crafting modern web solutions with cutting-edge technologies. Passionate about building scalable applications and sharing knowledge with the community.
+          </p>
+          <div class="hero-cta">
+            <a href="#featured" class="btn btn-primary btn-large">
+              <i class="fas fa-star"></i> Featured Work
+            </a>
+            <a href="#contact" class="btn btn-outline btn-large">
+              <i class="fas fa-paper-plane"></i> Let's Connect
+            </a>
+          </div>
+          <div class="tech-stack-quick">
+            <span class="tech-badge">React</span>
+            <span class="tech-badge">Node.js</span>
+            <span class="tech-badge">JavaScript</span>
+            <span class="tech-badge">Cloud</span>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Resume Builder Feature Section -->
-  <section class="section resume-builder-section" id="resume-builder">
+  <!-- Featured - Resume Builder -->
+  <section class="featured section" id="featured">
     <div class="container">
       <div class="section-header">
-        <div class="section-label">Featured Project</div>
+        <span class="section-badge">⭐ Featured Project</span>
         <h2 class="section-title">Resume Builder</h2>
-        <p class="section-subtitle">
-          A powerful, intuitive resume creation platform with real-time preview and ATS-friendly templates
-        </p>
+        <p class="section-subtitle">Professional Resume Creation Platform</p>
       </div>
 
-      <div class="resume-builder-container">
-        <div class="resume-builder-content">
-          <div class="resume-preview">
-            <div class="resume-header">
-              <h3>Your Resume Name</h3>
-              <p>Software Developer | Full Stack Engineer</p>
-            </div>
-            <div class="resume-section">
-              <h4>Professional Summary</h4>
-              <p>Experienced developer with expertise in building scalable web applications using modern technologies.</p>
-            </div>
-            <div class="resume-section">
-              <h4>Experience</h4>
-              <p><strong>Senior Developer</strong> - Tech Company (2023-Present)</p>
-              <p>Led development of innovative projects and mentored junior developers.</p>
-            </div>
-            <div class="resume-section">
-              <h4>Skills</h4>
-              <div class="skills-grid">
-                <span class="skill-tag">React</span>
-                <span class="skill-tag">TypeScript</span>
-                <span class="skill-tag">Node.js</span>
-                <span class="skill-tag">CSS3</span>
-                <span class="skill-tag">Git</span>
-                <span class="skill-tag">AWS</span>
+      <div class="featured-card">
+        <div class="featured-content">
+          <div class="featured-text">
+            <h3>Create Professional Resumes in Minutes</h3>
+            <p>A powerful, intuitive resume builder with real-time preview and ATS-optimized templates. Build, customize, and download your perfect resume instantly.</p>
+            
+            <div class="features-showcase">
+              <div class="feature-row">
+                <div class="feature-box">
+                  <i class="fas fa-bolt"></i>
+                  <span>Real-Time Preview</span>
+                </div>
+                <div class="feature-box">
+                  <i class="fas fa-check-circle"></i>
+                  <span>ATS Optimized</span>
+                </div>
+                <div class="feature-box">
+                  <i class="fas fa-palette"></i>
+                  <span>Custom Templates</span>
+                </div>
+                <div class="feature-box">
+                  <i class="fas fa-download"></i>
+                  <span>Instant Download</span>
+                </div>
               </div>
+            </div>
+
+            <div class="featured-actions">
+              <a href="https://karanray06.github.io/Resume_Builder-/" target="_blank" class="btn btn-primary btn-large">
+                <i class="fas fa-external-link-alt"></i> Visit Resume Builder
+              </a>
+              <a href="https://github.com/Karanray06/Resume" target="_blank" class="btn btn-outline btn-large">
+                <i class="fab fa-github"></i> View Code
+              </a>
             </div>
           </div>
-
-          <div class="resume-features">
-            <h3>Key Features</h3>
-            <div class="features-list">
-              <div class="feature-item">
-                <div class="feature-icon">
-                  <i class="fas fa-edit"></i>
-                </div>
-                <div class="feature-content">
-                  <h4>Intuitive Editor</h4>
-                  <p>Easy-to-use interface for building professional resumes</p>
-                </div>
+          <div class="featured-image">
+            <div class="browser-mockup">
+              <div class="browser-header">
+                <span></span><span></span><span></span>
               </div>
-
-              <div class="feature-item">
-                <div class="feature-icon">
-                  <i class="fas fa-eye"></i>
-                </div>
-                <div class="feature-content">
-                  <h4>Live Preview</h4>
-                  <p>See changes in real-time as you build your resume</p>
-                </div>
-              </div>
-
-              <div class="feature-item">
-                <div class="feature-icon">
-                  <i class="fas fa-check-circle"></i>
-                </div>
-                <div class="feature-content">
-                  <h4>ATS Optimized</h4>
-                  <p>Designed to pass Applicant Tracking Systems</p>
-                </div>
-              </div>
-
-              <div class="feature-item">
-                <div class="feature-icon">
-                  <i class="fas fa-palette"></i>
-                </div>
-                <div class="feature-content">
-                  <h4>Multiple Templates</h4>
-                  <p>Choose from professionally designed templates</p>
-                </div>
-              </div>
-
-              <div class="feature-item">
-                <div class="feature-icon">
-                  <i class="fas fa-download"></i>
-                </div>
-                <div class="feature-content">
-                  <h4>Export Options</h4>
-                  <p>Download as PDF or share online</p>
-                </div>
-              </div>
-
-              <div class="feature-item">
-                <div class="feature-icon">
-                  <i class="fas fa-shield-alt"></i>
-                </div>
-                <div class="feature-content">
-                  <h4>Secure & Private</h4>
-                  <p>Your data is encrypted and never shared</p>
+              <div class="browser-content">
+                <div class="resume-mockup">
+                  <div class="resume-header">
+                    <p class="resume-name">Your Name</p>
+                    <p class="resume-title">Full Stack Developer</p>
+                  </div>
+                  <div class="resume-section">
+                    <p class="resume-section-title">Experience</p>
+                    <p class="resume-text">Senior Developer at Tech Company</p>
+                  </div>
+                  <div class="resume-section">
+                    <p class="resume-section-title">Skills</p>
+                    <p class="resume-text">React • Node.js • AWS • Git</p>
+                  </div>
                 </div>
               </div>
             </div>
-
-            <a href="https://github.com/Karanray06/Resume" target="_blank" class="btn btn-primary">
-              <i class="fab fa-github"></i> View on GitHub
-            </a>
           </div>
         </div>
       </div>
