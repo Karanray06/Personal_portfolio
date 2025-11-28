@@ -4,14 +4,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Karan Ray - Modern Portfolio | Full Stack Developer | Resume Builder Specialist">
-  <meta name="keywords" content="portfolio, developer, software engineer, resume builder, web development">
-  <title>Karan Ray | Portfolio & Resume Builder</title>
+  <meta name="description" content="Karan Ray - Full Stack Developer & Tech Innovator">
+  <meta name="keywords" content="portfolio, developer, software engineer, web development">
+  <title>Karan Ray</title>
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
 
   <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -24,15 +25,13 @@
 
   <!-- Navigation -->
   <nav class="nav" id="navbar">
-    <div class="container nav-container">
-      <a href="#home" class="nav-logo">
-        <i class="fas fa-rocket"></i> Karan Ray
-      </a>
-      <ul class="nav-links">
-        <li><a href="#home" class="nav-link">Home</a></li>
-        <li><a href="#featured" class="nav-link">Featured</a></li>
-        <li><a href="#projects" class="nav-link">Projects</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">karan ray</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link">home</a></li>
+        <li><a href="#work" class="nav-link">work</a></li>
+        <li><a href="#about" class="nav-link">about</a></li>
+        <li><a href="#contact" class="nav-link">contact</a></li>
       </ul>
       <div class="nav-toggle" id="navToggle">
         <i class="fas fa-bars"></i>
@@ -40,47 +39,41 @@
     </div>
   </nav>
 
-  <!-- Hero Section with Profile Image -->
+  <!-- Hero Section -->
   <section class="hero section" id="home">
     <div class="container">
       <div class="hero-wrapper">
         <div class="hero-image-container">
           <div class="profile-image-frame">
             <img src="profile.jpg" alt="Karan Ray" class="profile-image">
-            <div class="image-glow"></div>
           </div>
         </div>
         <div class="hero-content">
-          <p class="hero-greeting">Welcome! 👋 I'm</p>
+          <p class="hero-greeting">Hey, I'm</p>
           <h1 class="hero-title">Karan Ray</h1>
           <p class="hero-role">Full Stack Developer & Tech Innovator</p>
           <p class="hero-description">
-            Crafting modern web solutions with cutting-edge technologies. Passionate about building scalable applications and sharing knowledge with the community.
+            Crafting modern web solutions with cutting-edge technologies. Passionate about building scalable
+            applications and sharing knowledge with the community.
           </p>
           <div class="hero-cta">
-            <a href="#featured" class="btn btn-primary btn-large">
-              <i class="fas fa-star"></i> Featured Work
+            <a href="#work" class="btn btn-primary btn-large">
+              view work
             </a>
             <a href="#contact" class="btn btn-outline btn-large">
-              <i class="fas fa-paper-plane"></i> Let's Connect
+              get in touch
             </a>
-          </div>
-          <div class="tech-stack-quick">
-            <span class="tech-badge">React</span>
-            <span class="tech-badge">Node.js</span>
-            <span class="tech-badge">JavaScript</span>
-            <span class="tech-badge">Cloud</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Featured - Resume Builder -->
-  <section class="featured section" id="featured">
+  <!-- Featured Project -->
+  <section class="featured section" id="work">
     <div class="container">
       <div class="section-header">
-        <span class="section-badge">⭐ Featured Project</span>
+        <span class="section-badge">featured</span>
         <h2 class="section-title">Resume Builder</h2>
         <p class="section-subtitle">Professional Resume Creation Platform</p>
       </div>
@@ -89,8 +82,9 @@
         <div class="featured-content">
           <div class="featured-text">
             <h3>Create Professional Resumes in Minutes</h3>
-            <p>A powerful, intuitive resume builder with real-time preview and ATS-optimized templates. Build, customize, and download your perfect resume instantly.</p>
-            
+            <p>A powerful, intuitive resume builder with real-time preview and ATS-optimized templates. Build,
+              customize, and download your perfect resume instantly.</p>
+
             <div class="features-showcase">
               <div class="feature-row">
                 <div class="feature-box">
@@ -114,10 +108,10 @@
 
             <div class="featured-actions">
               <a href="https://karanray06.github.io/Resume_Builder-/" target="_blank" class="btn btn-primary btn-large">
-                <i class="fas fa-external-link-alt"></i> Visit Resume Builder
+                visit project
               </a>
               <a href="https://github.com/Karanray06/Resume" target="_blank" class="btn btn-outline btn-large">
-                <i class="fab fa-github"></i> View Code
+                view code
               </a>
             </div>
           </div>
@@ -149,21 +143,41 @@
     </div>
   </section>
 
+  <!-- Projects Section -->
+  <section class="section projects-section" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">portfolio</div>
+        <h2 class="section-title">Other Projects</h2>
+        <p class="section-subtitle">
+          A selection of projects across different domains
+        </p>
+      </div>
+
+      <div class="projects-grid" id="projectsGrid">
+        <!-- Projects will be dynamically inserted here -->
+      </div>
+    </div>
+  </section>
+
   <!-- About Section -->
   <section class="section about-section" id="about">
     <div class="container">
       <div class="section-header">
-        <div class="section-label">About Me</div>
+        <div class="section-label">about me</div>
         <h2 class="section-title">Who I Am</h2>
       </div>
 
       <div class="about-content">
         <div class="about-text">
           <p>
-            I'm a passionate B.Tech Computer Science student at JIS University with a strong foundation in web development, cloud computing, and software engineering. I believe in the power of technology to solve real-world problems and create meaningful digital experiences.
+            I'm a passionate B.Tech Computer Science student at JIS University with a strong foundation in web
+            development, cloud computing, and software engineering. I believe in the power of technology to solve
+            real-world problems and create meaningful digital experiences.
           </p>
           <p>
-            My journey in tech has been driven by curiosity and a commitment to continuous learning. I love exploring new technologies, collaborating with diverse teams, and contributing to open-source projects. Whether it's building beautiful user interfaces or architecting scalable backend systems, I approach every project with dedication and creativity.
+            My journey in tech has been driven by curiosity and a commitment to continuous learning. I love exploring
+            new technologies, collaborating with diverse teams, and contributing to open-source projects.
           </p>
 
           <div class="about-stats">
@@ -223,31 +237,14 @@
     </div>
   </section>
 
-  <!-- Projects Section -->
-  <section class="section projects-section" id="projects">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-label">Portfolio</div>
-        <h2 class="section-title">Featured Projects</h2>
-        <p class="section-subtitle">
-          A selection of projects across different domains with custom themes and designs
-        </p>
-      </div>
-
-      <div class="projects-grid" id="projectsGrid">
-        <!-- Projects will be dynamically inserted here -->
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact/Social Section -->
+  <!-- Contact Section -->
   <section class="section contact-section" id="contact">
     <div class="container">
       <div class="section-header">
-        <div class="section-label">Connect</div>
+        <div class="section-label">connect</div>
         <h2 class="section-title">Let's Collaborate</h2>
         <p class="section-subtitle">
-          I'm always interested in hearing about new projects and opportunities. Feel free to reach out!
+          I'm always interested in hearing about new projects and opportunities.
         </p>
       </div>
 
@@ -262,7 +259,8 @@
           </div>
         </a>
 
-        <a href="https://wa.me/917980398203" target="_blank" rel="noopener noreferrer" class="social-card whatsapp-card">
+        <a href="https://wa.me/917980398203" target="_blank" rel="noopener noreferrer"
+          class="social-card whatsapp-card">
           <div class="social-icon">
             <i class="fab fa-whatsapp"></i>
           </div>
@@ -272,7 +270,8 @@
           </div>
         </a>
 
-        <a href="https://github.com/Karanray06" target="_blank" rel="noopener noreferrer" class="social-card github-card">
+        <a href="https://github.com/Karanray06" target="_blank" rel="noopener noreferrer"
+          class="social-card github-card">
           <div class="social-icon">
             <i class="fab fa-github"></i>
           </div>
@@ -282,7 +281,8 @@
           </div>
         </a>
 
-        <a href="https://www.linkedin.com/in/karan-ray-370150351/" target="_blank" rel="noopener noreferrer" class="social-card linkedin-card">
+        <a href="https://www.linkedin.com/in/karan-ray-370150351/" target="_blank" rel="noopener noreferrer"
+          class="social-card linkedin-card">
           <div class="social-icon">
             <i class="fab fa-linkedin"></i>
           </div>
@@ -292,7 +292,8 @@
           </div>
         </a>
 
-        <a href="https://www.instagram.com/karanray06/" target="_blank" rel="noopener noreferrer" class="social-card instagram-card">
+        <a href="https://www.instagram.com/karanray06/" target="_blank" rel="noopener noreferrer"
+          class="social-card instagram-card">
           <div class="social-icon">
             <i class="fab fa-instagram"></i>
           </div>
@@ -320,36 +321,39 @@
     <div class="container">
       <div class="footer-content">
         <div class="footer-section">
-          <div class="footer-logo">
-            <i class="fas fa-code"></i> Karan Ray
-          </div>
+          <div class="footer-logo">karan ray</div>
           <p class="footer-description">
-            Crafting digital experiences with passion, precision, and modern web technologies.
+            Crafting digital experiences with passion and modern web technologies.
           </p>
         </div>
 
         <div class="footer-section">
           <h4>Quick Links</h4>
           <ul class="footer-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#home">home</a></li>
+            <li><a href="#work">work</a></li>
+            <li><a href="#about">about</a></li>
+            <li><a href="#contact">contact</a></li>
           </ul>
         </div>
 
         <div class="footer-section">
           <h4>Follow</h4>
           <div class="footer-social">
-            <a href="https://github.com/Karanray06" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="GitHub">
+            <a href="https://github.com/Karanray06" target="_blank" rel="noopener noreferrer" class="footer-social-link"
+              aria-label="GitHub">
               <i class="fab fa-github"></i>
             </a>
-            <a href="https://www.linkedin.com/in/karan-ray-370150351/" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/in/karan-ray-370150351/" target="_blank" rel="noopener noreferrer"
+              class="footer-social-link" aria-label="LinkedIn">
               <i class="fab fa-linkedin"></i>
             </a>
-            <a href="https://x.com/karanray06" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="X (Twitter)">
+            <a href="https://x.com/karanray06" target="_blank" rel="noopener noreferrer" class="footer-social-link"
+              aria-label="X (Twitter)">
               <i class="fab fa-x-twitter"></i>
             </a>
-            <a href="https://www.instagram.com/karanray06/" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Instagram">
+            <a href="https://www.instagram.com/karanray06/" target="_blank" rel="noopener noreferrer"
+              class="footer-social-link" aria-label="Instagram">
               <i class="fab fa-instagram"></i>
             </a>
           </div>
@@ -357,7 +361,7 @@
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; 2025 Karan Ray. All rights reserved. | Crafted with <i class="fas fa-heart"></i> and modern web technologies</p>
+        <p>&copy; 2025 Karan Ray. All rights reserved.</p>
       </div>
     </div>
   </footer>

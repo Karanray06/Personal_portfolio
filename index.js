@@ -1,5 +1,5 @@
 // ===================================
-// PROJECT DATA WITH DOMAIN THEMES
+// PROJECT DATA
 // ===================================
 
 const projects = [
@@ -8,13 +8,8 @@ const projects = [
     description: "A professional resume builder application built with React and TypeScript. Features an intuitive interface for creating polished, ATS-friendly resumes with customizable templates and real-time preview.",
     tags: ["React", "TypeScript", "CSS", "Resume Builder"],
     image: "project-ecommerce.jpg",
-    liveUrl: "https://github.com/Karanray06/Resume",
-    githubUrl: "https://github.com/Karanray06/Resume",
-    domain: "resume",
-    colors: {
-      primary: "#2563eb",
-      secondary: "#dbeafe"
-    }
+    liveUrl: "https://karanray06.github.io/Resume_Builder-/",
+    githubUrl: "https://github.com/Karanray06/Resume"
   },
   {
     title: "GDG JISU Platform",
@@ -22,12 +17,7 @@ const projects = [
     tags: ["HTML", "CSS", "JavaScript", "Community"],
     image: "project-analytics.jpg",
     liveUrl: "https://github.com/Karanray06/GDG_JISU",
-    githubUrl: "https://github.com/Karanray06/GDG_JISU",
-    domain: "tech",
-    colors: {
-      primary: "#7c3aed",
-      secondary: "#f3e8ff"
-    }
+    githubUrl: "https://github.com/Karanray06/GDG_JISU"
   },
   {
     title: "Personal Portfolio",
@@ -35,12 +25,7 @@ const projects = [
     tags: ["HTML", "CSS", "JavaScript", "Portfolio"],
     image: "project-chatbot.jpg",
     liveUrl: "https://Karanray06.github.io/Personal_portfolio",
-    githubUrl: "https://github.com/Karanray06/Personal_portfolio",
-    domain: "dev",
-    colors: {
-      primary: "#059669",
-      secondary: "#d1fae5"
-    }
+    githubUrl: "https://github.com/Karanray06/Personal_portfolio"
   },
   {
     title: "C Programming Journey",
@@ -48,12 +33,7 @@ const projects = [
     tags: ["C", "Algorithms", "Data Structures"],
     image: "project-taskmanager.jpg",
     liveUrl: "https://github.com/Karanray06/C",
-    githubUrl: "https://github.com/Karanray06/C",
-    domain: "algorithms",
-    colors: {
-      primary: "#ea580c",
-      secondary: "#fed7aa"
-    }
+    githubUrl: "https://github.com/Karanray06/C"
   },
   {
     title: "Cloud Skills 2025",
@@ -61,12 +41,7 @@ const projects = [
     tags: ["Cloud", "DevOps", "Jupyter Notebook"],
     image: "project-fitness.jpg",
     liveUrl: "https://github.com/Karanray06/Cloud-Skills-2025",
-    githubUrl: "https://github.com/Karanray06/Cloud-Skills-2025",
-    domain: "cloud",
-    colors: {
-      primary: "#db2777",
-      secondary: "#fce7f3"
-    }
+    githubUrl: "https://github.com/Karanray06/Cloud-Skills-2025"
   },
   {
     title: "Weather Application",
@@ -74,21 +49,19 @@ const projects = [
     tags: ["JavaScript", "API", "UI/UX"],
     image: "project-weather.jpg",
     liveUrl: "https://github.com/Karanray06/Weather-App",
-    githubUrl: "https://github.com/Karanray06/Weather-App",
-    domain: "tech",
-    colors: {
-      primary: "#7c3aed",
-      secondary: "#f3e8ff"
-    }
+    githubUrl: "https://github.com/Karanray06/Weather-App"
   }
 ];
 
 // ===================================
-// NAVIGATION SCROLL EFFECT
+// NAVIGATION
 // ===================================
 
 const navbar = document.getElementById('navbar');
+const navToggle = document.getElementById('navToggle');
+const navLinks = document.getElementById('navLinks');
 
+// Scroll effect
 window.addEventListener('scroll', () => {
   if (window.pageYOffset > 50) {
     navbar.classList.add('scrolled');
@@ -97,8 +70,34 @@ window.addEventListener('scroll', () => {
   }
 });
 
+// Mobile menu toggle
+if (navToggle) {
+  navToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    const icon = navToggle.querySelector('i');
+    if (navLinks.classList.contains('active')) {
+      icon.classList.remove('fa-bars');
+      icon.classList.add('fa-times');
+    } else {
+      icon.classList.remove('fa-times');
+      icon.classList.add('fa-bars');
+    }
+  });
+
+  // Close menu when clicking on a link
+  const links = navLinks.querySelectorAll('.nav-link');
+  links.forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('active');
+      const icon = navToggle.querySelector('i');
+      icon.classList.remove('fa-times');
+      icon.classList.add('fa-bars');
+    });
+  });
+}
+
 // ===================================
-// SMOOTH SCROLL FOR NAVIGATION
+// SMOOTH SCROLL
 // ===================================
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -117,7 +116,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // ===================================
-// RENDER PROJECTS WITH DOMAIN THEMES
+// RENDER PROJECTS
 // ===================================
 
 function renderProjects() {
@@ -126,10 +125,6 @@ function renderProjects() {
   projects.forEach((project, index) => {
     const projectCard = document.createElement('div');
     projectCard.className = 'project-card';
-    
-    // Set CSS variables for domain colors
-    projectCard.style.setProperty('--domain-color-primary', project.colors.primary);
-    projectCard.style.setProperty('--domain-color-secondary', project.colors.secondary);
 
     // Create buttons HTML
     let buttonsHtml = '';
@@ -138,7 +133,7 @@ function renderProjects() {
       buttonsHtml += `
         <a href="${project.liveUrl}" target="_blank" rel="noopener noreferrer" class="project-link">
           <i class="fas fa-external-link-alt"></i>
-          <span>Live Demo</span>
+          <span>view project</span>
         </a>
       `;
     }
@@ -146,12 +141,12 @@ function renderProjects() {
     buttonsHtml += `
       <a href="${project.githubUrl}" target="_blank" rel="noopener noreferrer" class="project-link">
         <i class="fab fa-github"></i>
-        <span>Source Code</span>
+        <span>code</span>
       </a>
     `;
 
     projectCard.innerHTML = `
-      <img src="${project.image}" alt="${project.title}" class="project-image" id="projectImage${index}">
+      <img src="${project.image}" alt="${project.title}" class="project-image" loading="lazy">
       <div class="project-content">
         <div class="project-tags">
           ${project.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
@@ -174,7 +169,7 @@ function renderProjects() {
 
 const observerOptions = {
   threshold: 0.1,
-  rootMargin: '0px 0px -50px 0px'
+  rootMargin: '0px 0px -100px 0px'
 };
 
 const observer = new IntersectionObserver((entries) => {
@@ -188,60 +183,8 @@ const observer = new IntersectionObserver((entries) => {
 
 // Observe elements for fade-in animation
 function observeElements() {
-  const elements = document.querySelectorAll('.project-card, .social-card, .stat-item, .section-header, .feature-item, .resume-preview');
+  const elements = document.querySelectorAll('.project-card, .social-card, .stat-item, .feature-box');
   elements.forEach(el => observer.observe(el));
-}
-
-// ===================================
-// STATS COUNTER ANIMATION
-// ===================================
-
-function animateStats() {
-  const stats = document.querySelectorAll('.stat-number');
-
-  const statsObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const target = entry.target;
-        const finalValue = target.textContent;
-        const numericValue = parseInt(finalValue.replace(/\D/g, ''));
-        const suffix = finalValue.replace(/[0-9]/g, '');
-
-        let current = 0;
-        const increment = numericValue / 40;
-        const duration = 1500;
-        const stepTime = duration / 40;
-
-        const timer = setInterval(() => {
-          current += increment;
-          if (current >= numericValue) {
-            target.textContent = numericValue + suffix;
-            clearInterval(timer);
-          } else {
-            target.textContent = Math.floor(current) + suffix;
-          }
-        }, stepTime);
-
-        statsObserver.unobserve(target);
-      }
-    });
-  }, { threshold: 0.5 });
-
-  stats.forEach(stat => statsObserver.observe(stat));
-}
-
-// ===================================
-// MOBILE MENU TOGGLE
-// ===================================
-
-const navToggle = document.getElementById('navToggle');
-if (navToggle) {
-  navToggle.addEventListener('click', () => {
-    const navLinks = document.querySelector('.nav-links');
-    if (navLinks) {
-      navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
-    }
-  });
 }
 
 // ===================================
@@ -254,47 +197,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Wait a bit for DOM to be ready, then observe elements
   setTimeout(() => {
     observeElements();
-    animateStats();
   }, 100);
 });
 
-// ===================================
-// PERFORMANCE OPTIMIZATION
-// ===================================
-
-// Lazy load images
-if ('IntersectionObserver' in window) {
-  const imageObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const img = entry.target;
-        if (img.dataset.src) {
-          img.src = img.dataset.src;
-          img.removeAttribute('data-src');
-        }
-        imageObserver.unobserve(img);
-      }
-    });
-  });
-
-  // Observe all images with data-src attribute
-  document.querySelectorAll('img[data-src]').forEach(img => {
-    imageObserver.observe(img);
-  });
-}
-
-// ===================================
-// COLOR PICKER FUNCTIONALITY (OPTIONAL)
-// ===================================
-
-// This allows easy customization of colors via CSS variables
-function setProjectColors(projectIndex, primaryColor, secondaryColor) {
-  const cards = document.querySelectorAll('.project-card');
-  if (cards[projectIndex]) {
-    cards[projectIndex].style.setProperty('--domain-color-primary', primaryColor);
-    cards[projectIndex].style.setProperty('--domain-color-secondary', secondaryColor);
-  }
-}
-
-console.log('Modern Portfolio loaded successfully ✓');
-console.log('Domain-specific themes applied with gradient gradients and smooth animations')
+console.log('✓ Minimalist portfolio loaded');
