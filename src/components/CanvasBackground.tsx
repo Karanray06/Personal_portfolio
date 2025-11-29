@@ -38,7 +38,7 @@ function FloatingShape({ position, color, speed, factor }: FloatingShapeProps) {
                     clearcoat={1}
                     clearcoatRoughness={0}
                     transparent={true}
-                    opacity={0.8}
+                    opacity={0.5}
                 />
             </mesh>
         </Float>
@@ -56,6 +56,9 @@ export default function CanvasBackground() {
                 <FloatingShape position={[-2, 1, 0]} color="#b8c6db" speed={1.5} factor={0.5} />
                 <FloatingShape position={[2, -1, -1]} color="#f5f7fa" speed={2} factor={0.6} />
                 <FloatingShape position={[0, 0, -2]} color="#d1d8e0" speed={1} factor={0.3} />
+                <FloatingShape position={[-3, -2, -1]} color="#e0e7ff" speed={1.8} factor={0.4} />
+                <FloatingShape position={[3, 2, -2]} color="#e6e6fa" speed={1.2} factor={0.5} />
+                <FloatingShape position={[1, -2, -3]} color="#f0f8ff" speed={1.6} factor={0.7} />
             </Canvas>
         </div>
     );
