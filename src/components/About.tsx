@@ -1,6 +1,11 @@
 "use client";
 import { motion } from "framer-motion";
-import HolographicImage from "./HolographicImage";
+import dynamic from "next/dynamic";
+
+const HolographicImage = dynamic(() => import("./HolographicImage"), {
+    ssr: false,
+    loading: () => <div className="w-full h-[400px] md:h-[500px] bg-[#606887]/10 animate-pulse rounded-lg" />
+});
 
 export default function About() {
     const container = {

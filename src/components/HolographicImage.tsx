@@ -73,7 +73,7 @@ void main() {
 
 function ImagePlane() {
     const meshRef = useRef<THREE.Mesh>(null!);
-    const texture = useLoader(TextureLoader, "/profile.jpg");
+    const texture = useLoader(TextureLoader, "/Personal_portfolio/profile.jpg");
     const [hover, setHover] = useState(false);
 
     // Uniforms
