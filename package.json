@@ -1,20 +1,34 @@
 {
   "name": "personal-portfolio",
-  "version": "1.0.0",
-  "description": "Karan Ray's Personal Portfolio",
+  "version": "0.1.0",
+  "private": true,
   "homepage": "https://Karanray06.github.io/Personal_portfolio",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "deploy": "next build && npx gh-pages -d out"
   },
-  "keywords": [],
-  "author": "Karan Ray",
-  "license": "ISC",
+  "dependencies": {
+    "@react-three/drei": "^10.7.7",
+    "@react-three/fiber": "^9.4.0",
+    "framer-motion": "^12.23.24",
+    "lenis": "^1.3.15",
+    "next": "16.0.5",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
+    "sass": "^1.94.2",
+    "three": "^0.181.2"
+  },
   "devDependencies": {
-    "gh-pages": "^6.3.0",
-    "vite": "^5.0.0"
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.0.5",
+    "tailwindcss": "^4",
+    "typescript": "^5"
   }
 }

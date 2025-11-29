@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Karan Ray - Full Stack Developer</title>
+  <link rel="stylesheet" href="index.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <a href="#" class="nav-logo">kr</a>
+    <button class="nav-toggle" id="navToggle">menu</button>
+  </nav>
+
+  <!-- Intro Section -->
+  <div class="intro-wrapper" id="home">
+    <div class="intro-text">
+      <h3 class="intro-id">
+        Hey, I’m
+        <div class="name">
+          Karan Ray
+          <div class="wave-wrapper">
+            <div class="wave"></div>
+          </div>
+        </div>
+      </h3>
+
+      <h3 class="intro-id">
+        But you can call me
+        <div class="name">
+          Karan
+          <div class="wave-wrapper">
+            <div class="wave"></div>
+          </div>
+        </div>
+      </h3>
+
+      <div class="intro-roles">
+        <p>I’m a full stack developer,</p>
+        <p>& tech innovator</p>
+      </div>
+
+      <div class="intro-links">
+        <ul>
+          <li>
+            <div class="link-wrapper">
+              <div class="link">
+                <a href="#work">→ See my projects</a>
+              </div>
+              <div class="link-underline"></div>
+            </div>
+          </li>
+          <li>
+            <div class="link-wrapper">
+              <div class="link">
+                <a href="#about">→ More about me</a>
+              </div>
+              <div class="link-underline"></div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Work Section -->
+  <section class="section" id="work">
+    <h2 class="section-title">Selected Work</h2>
+    <div class="work-grid">
+      <!-- Project 1 -->
+      <div class="work-item">
+        <div class="work-number">01</div>
+        <div class="work-content">
+          <h3 class="work-title">Resume Builder</h3>
+          <p class="work-description">Professional resume creation platform with real-time preview and ATS optimization.
+          </p>
+          <div class="work-tags">
+            <span class="work-tag">React</span>
+            <span class="work-tag">TypeScript</span>
+          </div>
+          <div class="intro-links" style="margin-top: 24px;">
+            <div class="link-wrapper">
+              <div class="link">
+                <a href="https://karanray06.github.io/Resume_Builder-/" target="_blank">→ View Project</a>
+              </div>
+              <div class="link-underline"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="work-item">
+        <div class="work-number">02</div>
+        <div class="work-content">
+          <h3 class="work-title">GDG JISU</h3>
+          <p class="work-description">Community platform for Google Developer Group at JIS University.</p>
+          <div class="work-tags">
+            <span class="work-tag">HTML/CSS</span>
+            <span class="work-tag">JavaScript</span>
+          </div>
+          <div class="intro-links" style="margin-top: 24px;">
+            <div class="link-wrapper">
+              <div class="link">
+                <a href="https://github.com/Karanray06/GDG_JISU" target="_blank">→ View Project</a>
+              </div>
+              <div class="link-underline"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="section" id="about">
+    <h2 class="section-title">About Me</h2>
+    <div class="intro-text">
+      <p class="intro-roles">I'm a B.Tech Computer Science student at JIS University with a passion for building modern
+        web applications.</p>
+
+      <div class="intro-links" style="margin-top: 40px;">
+        <ul>
+          <li>
+            <div class="link-wrapper">
+              <div class="link">
+                <a href="mailto:2006karanray@gmail.com">→ Email Me</a>
+              </div>
+              <div class="link-underline"></div>
+            </div>
+          </li>
+          <li>
+            <div class="link-wrapper">
+              <div class="link">
+                <a href="https://github.com/Karanray06" target="_blank">→ GitHub</a>
+              </div>
+              <div class="link-underline"></div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu Overlay -->
+  <div class="menu-overlay" id="menuOverlay">
+    <button class="menu-close" id="menuClose">close</button>
+    <ul class="menu-links">
+      <li><a href="#home" class="menu-link">home</a></li>
+      <li><a href="#work" class="menu-link">work</a></li>
+      <li><a href="#about" class="menu-link">about</a></li>
+    </ul>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+
+</html>
