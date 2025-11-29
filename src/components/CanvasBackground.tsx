@@ -28,14 +28,17 @@ function FloatingShape({ position, color, speed, factor }: FloatingShapeProps) {
         <Float speed={speed} rotationIntensity={1} floatIntensity={2}>
             <mesh ref={meshRef} position={position}>
                 <sphereGeometry args={[1, 32, 32]} />
-                <MeshDistortMaterial
+                <meshPhysicalMaterial
                     color={color}
-                    envMapIntensity={1}
+                    roughness={0}
+                    metalness={0.1}
+                    transmission={1}
+                    thickness={1.5}
+                    ior={1.5}
                     clearcoat={1}
-                    clearcoatRoughness={0.1}
-                    metalness={0.5}
-                    distort={0.4}
-                    speed={2}
+                    clearcoatRoughness={0}
+                    transparent={true}
+                    opacity={0.8}
                 />
             </mesh>
         </Float>

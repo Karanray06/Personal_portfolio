@@ -30,7 +30,7 @@ export default function Hero() {
                     {"Hey, I'm"}
                 </motion.p>
 
-                <motion.h1 variants={item} className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-2 text-[#606887]">
+                <motion.h1 variants={item} className="text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tight mb-2 text-[#1a1a1a]">
                     Karan Ray
                 </motion.h1>
 
@@ -38,7 +38,7 @@ export default function Hero() {
                     But you can call me
                 </motion.p>
 
-                <motion.h2 variants={item} className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-8 text-[#606887]">
+                <motion.h2 variants={item} className="text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tight mb-8 text-[#1a1a1a]">
                     kariex
                 </motion.h2>
 

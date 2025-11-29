@@ -27,7 +27,7 @@ export default function About() {
                 viewport={{ once: true }}
                 className="w-full max-w-4xl mx-auto"
             >
-                <motion.h2 variants={item} className="text-4xl md:text-5xl font-bold mb-16 text-[#606887]">
+                <motion.h2 variants={item} className="text-4xl md:text-5xl font-extrabold mb-16 text-[#1a1a1a]">
                     About Me
                 </motion.h2>
 

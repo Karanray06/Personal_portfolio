@@ -18,6 +18,7 @@ export default function Contact() {
         show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeInOut" as any } },
     };
 
+
     return (
         <section className="min-h-screen flex flex-col justify-center items-start px-6 md:px-12 py-24 relative z-10" id="contact">
             <motion.div
