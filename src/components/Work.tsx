@@ -52,7 +52,7 @@ export default function Work() {
                 viewport={{ once: true }}
                 className="w-full max-w-6xl mx-auto"
             >
-                <motion.h2 variants={item} className="text-4xl md:text-5xl font-extrabold mb-16 text-[#1a1a1a]">
+                <motion.h2 variants={item} className="text-4xl md:text-5xl font-extrabold mb-16 text-[#606887]">
                     Selected Work
                 </motion.h2>
 
@@ -66,7 +66,7 @@ export default function Work() {
                             <div className="flex flex-col md:flex-row gap-6">
                                 <div className="text-2xl font-light opacity-50 w-16">{project.number}</div>
                                 <div className="flex-1">
-                                    <h3 className="text-2xl md:text-3xl font-extrabold mb-4 text-[#1a1a1a]">{project.title}</h3>
+                                    <h3 className="text-2xl md:text-3xl font-extrabold mb-4 text-[#606887]">{project.title}</h3>
                                     <p className="text-lg mb-6 opacity-80">{project.description}</p>
                                     <div className="flex flex-wrap gap-2 mb-6">
                                         {project.tags.map((tag) => (

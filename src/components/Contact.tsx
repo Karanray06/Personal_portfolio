@@ -28,7 +28,7 @@ export default function Contact() {
                 viewport={{ once: true }}
                 className="w-full max-w-4xl mx-auto"
             >
-                <motion.h2 variants={item} className="text-4xl md:text-5xl font-bold mb-16 text-[#606887]">
+                <motion.h2 variants={item} className="text-4xl md:text-5xl font-extrabold mb-16 text-[#606887]">
                     Get In Touch
                 </motion.h2>
 
@@ -77,6 +77,6 @@ export default function Contact() {
                     </a>
                 </motion.div>
             </motion.div>
-        </section>
+        </section >
     );
 }
