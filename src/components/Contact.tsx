@@ -45,6 +45,32 @@ export default function Contact() {
                     <a
                         href="https://github.com/Karanray06"
                         target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 text-lg font-medium hover:opacity-70 transition-opacity"
+                    >
+                        → GitHub
+                    </a>
+                    <a
+                        href="https://www.linkedin.com/in/karan-ray-370150351/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 text-lg font-medium hover:opacity-70 transition-opacity"
+                    >
+                        → LinkedIn
+                    </a>
+                    <a
+                        href="https://www.instagram.com/karanray06/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 text-lg font-medium hover:opacity-70 transition-opacity"
+                    >
+                        → Instagram
+                    </a>
+                    <a
+                        href="https://twitter.com/karanray06"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 text-lg font-medium hover:opacity-70 transition-opacity"
                     >
                         → Twitter
                     </a>
