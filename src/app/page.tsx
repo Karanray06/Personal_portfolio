@@ -1,3 +1,5 @@
+"use client";
+import { useState } from "react";
 import Preloader from "@/components/Preloader";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -9,16 +11,18 @@ import CanvasBackground from "@/components/CanvasBackground";
 import SmoothScroll from "@/components/SmoothScroll";
 
 export default function Home() {
+  const [activeSection, setActiveSection] = useState("home");
+
   return (
     <SmoothScroll>
       <Preloader />
-      <Navbar />
+      <Navbar activeSection={activeSection} setActiveSection={setActiveSection} />
       <CanvasBackground />
-      <main className="relative z-10">
-        <Hero />
-        <Work />
-        <About />
-        <Contact />
+      <main className="relative z-10 min-h-screen">
+        {activeSection === "home" && <Hero />}
+        {activeSection === "work" && <Work />}
+        {activeSection === "about" && <About />}
+        {activeSection === "contact" && <Contact />}
       </main>
       <Footer />
     </SmoothScroll>

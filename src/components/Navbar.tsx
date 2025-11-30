@@ -3,8 +3,12 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 
-export default function Navbar() {
-    const [activeSection, setActiveSection] = useState("home");
+interface NavbarProps {
+    activeSection: string;
+    setActiveSection: (section: string) => void;
+}
+
+export default function Navbar({ activeSection, setActiveSection }: NavbarProps) {
     const [theme, setTheme] = useState<"default" | "dark" | "aesthetic">("default");
 
     // Theme Toggle Logic
@@ -34,34 +38,44 @@ export default function Navbar() {
         });
     };
 
-    // Scroll Spy Logic
-    useEffect(() => {
-        const sections = ["home", "work", "about", "contact"];
-        const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        setActiveSection(entry.target.id);
-                    }
-                });
-            },
-            { threshold: 0.5 }
-        );
-
-        sections.forEach((section) => {
-            const element = document.getElementById(section);
-            if (element) observer.observe(element);
-        });
-
-        return () => observer.disconnect();
-    }, []);
-
     const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
         e.preventDefault();
         setActiveSection(id);
-        const element = document.getElementById(id);
-        if (element) {
-            element.scrollIntoView({ behavior: "smooth" });
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    };
+
+    const getIcon = (item: string) => {
+        switch (item) {
+            case "Home":
+                return (
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                        <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                    </svg>
+                );
+            case "Work":
+                return (
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <rect width="20" height="14" x="2" y="7" rx="2" ry="2"></rect>
+                        <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                    </svg>
+                );
+            case "About":
+                return (
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                );
+            case "Contact":
+                return (
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                    </svg>
+                );
+            default:
+                return null;
         }
     };
 
@@ -73,14 +87,14 @@ export default function Navbar() {
             className="fixed top-0 left-0 w-full z-40 px-6 py-6 flex justify-between items-start pointer-events-none"
         >
             {/* Brand */}
-            <div className="pointer-events-auto mix-blend-difference text-white">
-                <Link href="/" className="text-sm uppercase tracking-wider font-medium hover:underline">
+            <div className="pointer-events-auto text-[#4A5068] dark:text-[#EDEDED] aesthetic:text-[#93B0AC]">
+                <Link href="/" className="text-sm uppercase tracking-wider font-bold hover:underline">
                     kariexo / karan ray
                 </Link>
             </div>
 
             {/* Top Right Controls: Language | Theme | Menu */}
-            <div className="fixed right-6 top-6 flex items-center gap-6 pointer-events-auto mix-blend-difference text-white">
+            <div className="fixed right-6 top-6 flex items-center gap-6 pointer-events-auto text-[#4A5068] dark:text-[#EDEDED] aesthetic:text-[#93B0AC]">
                 {/* Language Toggle */}
                 <div className="flex gap-2 text-sm font-medium uppercase">
                     <span className="opacity-50">FR</span>
@@ -156,9 +170,7 @@ export default function Navbar() {
                                     borderColor: isActive ? "var(--nav-text)" : "transparent",
                                 }}
                             >
-                                <span className="font-extrabold text-[10px] uppercase tracking-tight">
-                                    {item}
-                                </span>
+                                {getIcon(item)}
                             </motion.div>
                         </Link>
                     );

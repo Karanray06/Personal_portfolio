@@ -21,8 +21,16 @@
 
 .dark {
   /* Dark Mode Navigation */
-  --nav-bg: #1A1A1A;
+  --background: #1A1A1A;
+  /* Hazy Gray/Black base */
+  --foreground: #EDEDED;
+  --nav-bg: #2A2A2A;
+  /* Slightly lighter for nav */
   --nav-text: #EDEDED;
+
+  background: linear-gradient(to bottom, #2C2C2C, #1A1A1A, #000000);
+  /* Hazy Gray/Black Gradient */
+  min-height: 100vh;
 }
 
 .aesthetic {
