@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f3f2f9;
+  --background: #C3DCD8;
   --foreground: #606887;
   --font-inter: "Inter", sans-serif;
 
@@ -14,7 +14,8 @@
   --color-muted-teal: #93B0AC;
 
   /* Default Light Mode Navigation */
-  --nav-bg: #F7F7F7;
+  --nav-bg: #FBE8ED;
+  /* Using Pale Pink for Nav BG in Light Mode */
   --nav-text: #606887;
 }
 
@@ -47,6 +48,8 @@ body {
   font-family: var(--font-inter);
   overflow-x: hidden;
   /* Prevent horizontal scroll */
+  overflow-y: hidden;
+  /* Disable manual scrolling */
 }
 
 /* Custom Cursor Styles (will be implemented in component) */

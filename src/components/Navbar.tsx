@@ -56,6 +56,15 @@ export default function Navbar() {
         return () => observer.disconnect();
     }, []);
 
+    const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+        e.preventDefault();
+        setActiveSection(id);
+        const element = document.getElementById(id);
+        if (element) {
+            element.scrollIntoView({ behavior: "smooth" });
+        }
+    };
+
     return (
         <motion.nav
             initial={{ opacity: 0, y: -20 }}
@@ -66,7 +75,7 @@ export default function Navbar() {
             {/* Brand */}
             <div className="pointer-events-auto mix-blend-difference text-white">
                 <Link href="/" className="text-sm uppercase tracking-wider font-medium hover:underline">
-                    kariex / karan ray
+                    kariexo / karan ray
                 </Link>
             </div>
 
@@ -133,7 +142,7 @@ export default function Navbar() {
                             key={item}
                             href={`#${item.toLowerCase()}`}
                             className="group relative flex flex-col items-center gap-1"
-                            onClick={() => setActiveSection(item.toLowerCase())}
+                            onClick={(e) => handleNavClick(e, item.toLowerCase())}
                         >
                             <motion.div
                                 whileHover={{ scale: 1.1 }}

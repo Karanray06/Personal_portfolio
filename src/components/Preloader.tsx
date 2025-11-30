@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 export default function Preloader() {
     const [isLoading, setIsLoading] = useState(true);
-    const [text, setText] = useState("kariex");
+    const [text, setText] = useState("kariexo");
 
     useEffect(() => {
         const timer1 = setTimeout(() => {

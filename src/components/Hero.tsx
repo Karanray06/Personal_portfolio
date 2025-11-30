@@ -39,7 +39,7 @@ export default function Hero() {
                 </motion.p>
 
                 <motion.h2 variants={item} className="text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tight mb-8 text-[#606887]">
-                    kariex
+                    kariexo
                 </motion.h2>
 
                 <motion.p variants={item} className="text-lg md:text-xl max-w-2xl mx-auto mb-12 leading-relaxed opacity-90">
