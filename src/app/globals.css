@@ -4,12 +4,41 @@
   --background: #f3f2f9;
   --foreground: #606887;
   --font-inter: "Inter", sans-serif;
+
+  /* User Palette */
+  --color-sage: #C3DCD8;
+  --color-pink: #EFD1D4;
+  --color-pale-pink: #FBE8ED;
+  --color-grey: #DBD9DA;
+  --color-khaki: #C5BD96;
+  --color-muted-teal: #93B0AC;
+
+  /* Default Light Mode Navigation */
+  --nav-bg: #F7F7F7;
+  --nav-text: #606887;
+}
+
+.dark {
+  /* Dark Mode Navigation */
+  --nav-bg: #1A1A1A;
+  --nav-text: #EDEDED;
+}
+
+.aesthetic {
+  /* Aesthetic Light Mode Navigation */
+  --nav-bg: var(--color-grey);
+  /* #DBD9DA */
+  --nav-text: var(--color-muted-teal);
+  /* #93B0AC */
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-inter);
+
+  --color-nav-bg: var(--nav-bg);
+  --color-nav-text: var(--nav-text);
 }
 
 body {
