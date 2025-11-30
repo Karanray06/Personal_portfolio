@@ -56,8 +56,6 @@ body {
   font-family: var(--font-inter);
   overflow-x: hidden;
   /* Prevent horizontal scroll */
-  overflow-y: hidden;
-  /* Disable manual scrolling */
 }
 
 /* Custom Cursor Styles (will be implemented in component) */
