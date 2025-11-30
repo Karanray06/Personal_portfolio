@@ -10,6 +10,7 @@ interface NavbarProps {
 
 export default function Navbar({ activeSection, setActiveSection }: NavbarProps) {
     const [theme, setTheme] = useState<"default" | "dark" | "aesthetic">("default");
+    const [menuOpen, setMenuOpen] = useState(false);
 
     // Theme Toggle Logic
     useEffect(() => {
@@ -137,7 +138,11 @@ export default function Navbar({ activeSection, setActiveSection }: NavbarProps)
                 </button>
 
                 {/* Menu Grid Icon */}
-                <button className="hover:opacity-70 transition-opacity" aria-label="Menu">
+                <button
+                    onClick={() => setMenuOpen(!menuOpen)}
+                    className="hover:opacity-70 transition-opacity"
+                    aria-label="Menu"
+                >
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                         <rect x="3" y="3" width="7" height="7"></rect>
                         <rect x="14" y="3" width="7" height="7"></rect>
@@ -147,35 +152,47 @@ export default function Navbar({ activeSection, setActiveSection }: NavbarProps)
                 </button>
             </div>
 
-            {/* App-like Navigation Menu */}
-            <div className="fixed left-1/2 -translate-x-1/2 bottom-8 flex items-center gap-4 pointer-events-auto">
-                {["Home", "Work", "About", "Contact"].map((item) => {
-                    const isActive = activeSection === item.toLowerCase();
-                    return (
-                        <Link
-                            key={item}
-                            href={`#${item.toLowerCase()}`}
-                            className="group relative flex flex-col items-center gap-1"
-                            onClick={(e) => handleNavClick(e, item.toLowerCase())}
-                        >
-                            <motion.div
-                                whileHover={{ scale: 1.1 }}
-                                whileTap={{ scale: 0.95 }}
-                                className={`w-12 h-12 rounded-2xl flex items-center justify-center shadow-sm transition-all duration-300 group-hover:shadow-md ${isActive ? "ring-2 ring-offset-2 ring-offset-transparent" : ""
-                                    }`}
-                                style={{
-                                    backgroundColor: "var(--nav-bg)",
-                                    color: "var(--nav-text)",
-                                    boxShadow: isActive ? "0 4px 12px rgba(0,0,0,0.1)" : "none",
-                                    borderColor: isActive ? "var(--nav-text)" : "transparent",
+            {/* App-like Navigation Menu - Grid Layout in Top Right */}
+            {menuOpen && (
+                <motion.div
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0.9 }}
+                    transition={{ duration: 0.2 }}
+                    className="fixed right-6 top-20 grid grid-cols-2 gap-3 pointer-events-auto"
+                >
+                    {["Home", "Work", "About", "Contact"].map((item) => {
+                        const isActive = activeSection === item.toLowerCase();
+                        return (
+                            <Link
+                                key={item}
+                                href={`#${item.toLowerCase()}`}
+                                className="group relative"
+                                onClick={(e) => {
+                                    handleNavClick(e, item.toLowerCase());
+                                    setMenuOpen(false);
                                 }}
                             >
-                                {getIcon(item)}
-                            </motion.div>
-                        </Link>
-                    );
-                })}
-            </div>
+                                <motion.div
+                                    whileHover={{ scale: 1.1 }}
+                                    whileTap={{ scale: 0.95 }}
+                                    className={`w-14 h-14 rounded-2xl flex items-center justify-center shadow-md transition-all duration-300 group-hover:shadow-lg ${isActive ? "ring-2 ring-offset-2 ring-offset-transparent" : ""
+                                        }`}
+                                    style={{
+                                        backgroundColor: "var(--nav-bg)",
+                                        color: "var(--nav-text)",
+                                        boxShadow: isActive ? "0 4px 12px rgba(0,0,0,0.1)" : "none",
+                                        borderColor: isActive ? "var(--nav-text)" : "transparent",
+                                    }}
+                                >
+                                    {getIcon(item)}
+                                </motion.div>
+                            </Link>
+                        );
+                    })}
+                </motion.div>
+            )}
+
         </motion.nav>
     );
 }
