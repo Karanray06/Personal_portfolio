@@ -94,14 +94,8 @@ export default function Navbar({ activeSection, setActiveSection }: NavbarProps)
                 </Link>
             </div>
 
-            {/* Top Right Controls: Language | Theme | Menu */}
+            {/* Top Right Controls: Theme | Menu */}
             <div className="fixed right-6 top-6 flex items-center gap-6 pointer-events-auto text-[#4A5068] dark:text-[#EDEDED] aesthetic:text-[#93B0AC]">
-                {/* Language Toggle */}
-                <div className="flex gap-2 text-sm font-medium uppercase">
-                    <span className="opacity-50">FR</span>
-                    <span>/</span>
-                    <span className="underline">EN</span>
-                </div>
 
                 {/* Theme Toggle */}
                 <button

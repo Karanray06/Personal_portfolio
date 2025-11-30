@@ -1,7 +1,11 @@
 "use client";
 import { motion } from "framer-motion";
 
-export default function Hero() {
+interface HeroProps {
+    setActiveSection: (section: string) => void;
+}
+
+export default function Hero({ setActiveSection }: HeroProps) {
     const container = {
         hidden: { opacity: 0 },
         show: {
@@ -47,13 +51,29 @@ export default function Hero() {
                 </motion.p>
 
                 <motion.div variants={item} className="flex flex-col md:flex-row gap-6 justify-center items-center mb-16">
-                    <a href="#work" className="group flex items-center gap-2 text-lg font-medium hover:opacity-70 transition-opacity">
+                    <a
+                        href="#work"
+                        className="group flex items-center gap-2 text-lg font-medium hover:opacity-70 transition-opacity"
+                        onClick={(e) => {
+                            e.preventDefault();
+                            setActiveSection("work");
+                            window.scrollTo({ top: 0, behavior: "smooth" });
+                        }}
+                    >
                         <span className="w-8 h-8 rounded-full border border-[#606887] flex items-center justify-center group-hover:bg-[#606887] group-hover:text-white transition-colors">
                             →
                         </span>
                         See my projects
                     </a>
-                    <a href="#about" className="group flex items-center gap-2 text-lg font-medium hover:opacity-70 transition-opacity">
+                    <a
+                        href="#about"
+                        className="group flex items-center gap-2 text-lg font-medium hover:opacity-70 transition-opacity"
+                        onClick={(e) => {
+                            e.preventDefault();
+                            setActiveSection("about");
+                            window.scrollTo({ top: 0, behavior: "smooth" });
+                        }}
+                    >
                         <span className="w-8 h-8 rounded-full border border-[#606887] flex items-center justify-center group-hover:bg-[#606887] group-hover:text-white transition-colors">
                             →
                         </span>

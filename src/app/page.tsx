@@ -19,7 +19,7 @@ export default function Home() {
       <Navbar activeSection={activeSection} setActiveSection={setActiveSection} />
       <CanvasBackground />
       <main className="relative z-10 min-h-screen">
-        {activeSection === "home" && <Hero />}
+        {activeSection === "home" && <Hero setActiveSection={setActiveSection} />}
         {activeSection === "work" && <Work />}
         {activeSection === "about" && <About />}
         {activeSection === "contact" && <Contact />}
