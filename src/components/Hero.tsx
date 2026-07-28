@@ -1,6 +1,6 @@
 "use client";
-import { motion } from "framer-motion";
-import { Monogram } from "../brand/Monogram";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { BrandMark } from "../brand/BrandMark";
 import { BlobShape } from "../brand/Blobs";
 
 interface HeroProps {
@@ -8,6 +8,10 @@ interface HeroProps {
 }
 
 export default function Hero({ setActiveSection }: HeroProps) {
+    const { scrollY } = useScroll();
+    const y1 = useTransform(scrollY, [0, 1000], [0, 200]);
+    const y2 = useTransform(scrollY, [0, 1000], [0, -200]);
+
     const container = {
         hidden: { opacity: 0 },
         show: {
@@ -27,21 +31,13 @@ export default function Hero({ setActiveSection }: HeroProps) {
     return (
         <section className="min-h-screen flex flex-col justify-center px-6 md:px-20 relative z-10 overflow-hidden bg-[var(--bg-dark)] text-[var(--text-on-dark)]">
             
-            {/* Background Texture & Bleeding Blobs */}
+            {/* Abstract Background Shapes (Blurred / Low Opacity) */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                <motion.div 
-                    animate={{ x: [-20, 20, -20], y: [-20, 20, -20] }}
-                    transition={{ repeat: Infinity, duration: 15, ease: "linear" }}
-                    className="absolute -top-32 -left-32 w-[600px] h-[600px] opacity-20 blur-3xl"
-                >
-                    <Monogram layout="scattered" variant="solid" className="w-full h-full scale-150" />
+                <motion.div style={{ y: y1 }} className="absolute top-0 right-0 w-[800px] h-[800px] -mr-40 -mt-20 opacity-[0.15] blur-2xl">
+                    <BrandMark variant="light-bg" className="w-full h-full scale-150" />
                 </motion.div>
-                <motion.div 
-                    animate={{ x: [20, -20, 20], y: [20, -20, 20] }}
-                    transition={{ repeat: Infinity, duration: 20, ease: "linear" }}
-                    className="absolute -bottom-32 -right-32 w-[600px] h-[600px] opacity-20 blur-3xl"
-                >
-                    <Monogram layout="scattered" variant="solid" className="w-full h-full scale-150 rotate-180" />
+                <motion.div style={{ y: y2 }} className="absolute bottom-0 left-0 w-[600px] h-[600px] -ml-20 -mb-20 opacity-[0.15] blur-3xl">
+                    <BrandMark variant="dark-bg" className="w-full h-full scale-150 rotate-180" />
                 </motion.div>
             </div>
 
@@ -51,9 +47,14 @@ export default function Hero({ setActiveSection }: HeroProps) {
                 animate="show"
                 className="max-w-5xl mx-auto w-full z-10 pt-20"
             >
-                {/* Monogram Mark */}
-                <motion.div variants={item} className="mb-12">
-                    <Monogram layout="compact" variant="glass" className="w-24 h-24" />
+                {/* Brand Mark */}
+                <motion.div
+                    initial={{ scale: 0.8, opacity: 0 }}
+                    animate={{ scale: 1, opacity: 1 }}
+                    transition={{ duration: 1, ease: "easeOut" }}
+                    className="mb-8"
+                >
+                    <BrandMark variant="dark-bg" className="w-24 h-24" />
                 </motion.div>
 
                 {/* Headline */}

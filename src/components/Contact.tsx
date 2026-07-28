@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import { Monogram } from "../brand/Monogram";
+import { BrandMark } from "../brand/BrandMark";
 
 export default function Contact() {
     const container = {
@@ -27,9 +27,9 @@ export default function Contact() {
                 <motion.div 
                     animate={{ rotate: 360 }}
                     transition={{ repeat: Infinity, duration: 60, ease: "linear" }}
-                    className="w-[800px] h-[800px] opacity-10 blur-3xl"
+                    className="absolute inset-0 overflow-hidden pointer-events-none opacity-5"
                 >
-                    <Monogram layout="scattered" variant="outlineGlow" className="w-full h-full scale-150" />
+                    <BrandMark variant="dark-bg" className="w-full h-full scale-150" />
                 </motion.div>
             </div>
 
@@ -40,9 +40,9 @@ export default function Contact() {
                 viewport={{ once: true }}
                 className="w-full max-w-4xl mx-auto flex flex-col items-center text-center relative z-10"
             >
-                <motion.div variants={item} className="mb-12">
-                    <Monogram layout="compact" variant="solid" className="w-16 h-16" />
-                </motion.div>
+                <div className="flex justify-center mb-12">
+                    <BrandMark variant="mono" className="w-16 h-16 text-[var(--accent-muted)]" />
+                </div>
 
                 <motion.h2 variants={item} className="text-4xl md:text-6xl font-black mb-8 tracking-tight uppercase">
                     Let's create <br/> something <span className="holo-gradient-text">unpredictable</span>.

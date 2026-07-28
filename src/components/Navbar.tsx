@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
-import { Monogram } from "../brand/Monogram";
+import { BrandMark } from "../brand/BrandMark";
 
 interface NavbarProps {
     activeSection: string;
@@ -37,7 +37,7 @@ export default function Navbar({ activeSection, setActiveSection }: NavbarProps)
                 {/* Brand Logo - Top Left */}
                 <div className="pointer-events-auto">
                     <Link href="/" onClick={(e) => handleNavClick(e, 'home')}>
-                        <Monogram layout="compact" variant="glass" className="w-10 h-10 hover:opacity-80 transition-opacity" />
+                        <BrandMark variant="dark-bg" className="w-10 h-10 hover:opacity-80 transition-opacity" />
                     </Link>
                 </div>
 
@@ -66,8 +66,8 @@ export default function Navbar({ activeSection, setActiveSection }: NavbarProps)
                         className="fixed inset-0 z-40 bg-[var(--bg-dark)]/95 backdrop-blur-xl flex items-center justify-center"
                     >
                         {/* Background subtle scatter for menu */}
-                        <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-10">
-                            <Monogram layout="scattered" variant="outlineGlow" className="w-full h-full scale-150 rotate-45" />
+                        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                            <BrandMark variant="light-bg" className="w-full h-full scale-150 rotate-45 opacity-30" />
                         </div>
 
                         <div className="flex flex-col gap-8 text-center relative z-10 w-full max-w-md px-6">
