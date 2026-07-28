@@ -1,75 +1,112 @@
 @import "tailwindcss";
 
-:root {
-  --background: #C3DCD8;
-  --foreground: #606887;
-  --font-inter: "Inter", sans-serif;
-
-  /* User Palette */
-  --color-sage: #C3DCD8;
-  --color-pink: #EFD1D4;
-  --color-pale-pink: #FBE8ED;
-  --color-grey: #DBD9DA;
-  --color-khaki: #C5BD96;
-  --color-muted-teal: #93B0AC;
-
-  /* Default Light Mode Navigation */
-  --nav-bg: #FBE8ED;
-  /* Using Pale Pink for Nav BG in Light Mode */
-  --nav-text: #606887;
-}
-
-.dark {
-  /* Dark Mode Navigation */
-  --background: #1A1A1A;
-  /* Hazy Gray/Black base */
-  --foreground: #EDEDED;
-  --nav-bg: #2A2A2A;
-  /* Slightly lighter for nav */
-  --nav-text: #EDEDED;
-
-  background: linear-gradient(to bottom, #2C2C2C, #1A1A1A, #000000);
-  /* Hazy Gray/Black Gradient */
-  min-height: 100vh;
-}
-
-.aesthetic {
-  /* Aesthetic Light Mode Navigation */
-  --nav-bg: var(--color-grey);
-  /* #DBD9DA */
-  --nav-text: var(--color-muted-teal);
-  /* #93B0AC */
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-inter);
+  --color-background-dark: var(--bg-dark);
+  --color-background-dark-card: var(--bg-dark-card);
+  --color-background-light: var(--bg-light);
+  
+  --color-text-on-dark: var(--text-on-dark);
+  --color-text-on-light: var(--text-on-light);
+  --color-muted: var(--accent-muted);
 
-  --color-nav-bg: var(--nav-bg);
-  --color-nav-text: var(--nav-text);
+  --color-flamingo: var(--flamingo);
+  --color-azure: var(--azure);
+  --color-springgreen: var(--springgreen);
+  --color-lime: var(--lime);
+
+  --font-heading: var(--font-space-grotesk), sans-serif;
+  --font-body: var(--font-outfit), sans-serif;
+}
+
+:root {
+  /* Holographic Blob Brand System */
+  
+  /* Backgrounds */
+  --bg-dark: #2b2b33;
+  --bg-dark-card: #45495d;
+  --bg-light: #f3f2f9;
+  
+  /* Text */
+  --text-on-dark: #f3f2f9;
+  --text-on-light: #606887;
+  
+  /* Accents */
+  --accent-muted: #aab2d1;
+  
+  /* Holographic Palette */
+  --flamingo: #ffb3c2;
+  --azure: #99b9ff;
+  --springgreen: #78ffd1;
+  --lime: #f0ffa6;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-inter);
+  background-color: var(--bg-dark);
+  color: var(--text-on-dark);
+  font-family: var(--font-body), sans-serif;
   overflow-x: hidden;
-  /* Prevent horizontal scroll */
+  -webkit-font-smoothing: antialiased;
 }
 
-/* Custom Cursor Styles (will be implemented in component) */
-.cursor-dot {
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading), sans-serif;
+}
+
+/* Base styles for the soft holographic gradients */
+.holo-gradient {
+  background: linear-gradient(135deg, var(--flamingo), var(--azure), var(--springgreen), var(--lime));
+  background-size: 300% 300%;
+  animation: holoFlow 8s ease infinite;
+}
+
+.holo-gradient-text {
+  background: linear-gradient(135deg, var(--flamingo), var(--azure), var(--springgreen), var(--lime));
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: holoFlow 8s ease infinite;
+}
+
+@keyframes holoFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Smooth scrolling for lenis */
+html.lenis, html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+.lenis.lenis-scrolling iframe {
   pointer-events: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 20px;
-  height: 20px;
-  background-color: white;
-  border-radius: 50%;
-  mix-blend-mode: difference;
-  z-index: 9999;
-  transform: translate(-50%, -50%);
-  transition: width 0.3s, height 0.3s;
+}
+
+/* Blob animation for About section color-wash */
+@keyframes blob {
+  0% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(30px, -50px) scale(1.1); }
+  66% { transform: translate(-20px, 20px) scale(0.9); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+
+.animate-blob {
+  animation: blob 7s infinite;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
 }

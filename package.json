@@ -2,13 +2,11 @@
   "name": "personal-portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Karanray06.github.io/Personal_portfolio",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint",
-    "deploy": "next build && npx gh-pages -d out"
+    "lint": "eslint"
   },
   "dependencies": {
     "@react-three/drei": "^10.7.7",
